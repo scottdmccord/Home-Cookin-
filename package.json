@@ -1,0 +1,19 @@
+{
+  "name": "home_cookin",
+  "version": "1.0.0",
+  "description": "Home Cookin' is a an app that connects people who love home cooking with people who love to cook.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scottdmccord/Home-Cookin-.git"
+  },
+  "author": "Scott McCord",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/scottdmccord/Home-Cookin-/issues"
+  },
+  "homepage": "https://github.com/scottdmccord/Home-Cookin-#readme"
+}
