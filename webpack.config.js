@@ -30,7 +30,7 @@ const config = {
       },
     }),
     new HtmlWebpackPlugin({
-      title:      'Tasks',
+      title:      "Home Cookin'",
       xhtml:      true,
       inject:     false,
       template:   htmlTemplate,
