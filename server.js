@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const logger = require('morgan');
 const path = require('path');
 
-// const homeRoute = require('./routes/index.js')
+const homeRoute = require('./routes/index.js')
 
 // Only load dotenv if we need it (if we have NODE_ENV in our environment)
 const isDev = !('NODE_ENV' in process.env) && require('dotenv').config() && true;
@@ -21,7 +21,7 @@ app.use(logger(isDev ? 'dev' : 'common'));
 app.use(bodyParser.json());
 
 // handle the routes
-// app.use('/', homeRoute);
+app.use('/', homeRoute);
 
 // add an error handler
 app.use((err, req, res, next) => {
