@@ -50,7 +50,7 @@
 	'use strict';var _react=__webpack_require__(/*! react */ 1);var _react2=_interopRequireDefault(_react);var _reactDom=__webpack_require__(/*! react-dom */ 32);var _reactDom2=_interopRequireDefault(_reactDom);var _App=__webpack_require__(/*! ./components/App/App */ 178);var _App2=_interopRequireDefault(_App);var _reactRouter=__webpack_require__(/*! react-router */ 179);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}// I followed the React Router tutorial to render different
 	// pages through my App: https://github.com/reactjs/react-router-tutorial
 	// mount our App at #container
-	_reactDom2.default.render(_react2.default.createElement(_reactRouter.Router,{history:_reactRouter.hashHistory},_react2.default.createElement(_reactRouter.Route,{path:'/',component:_App2.default})),document.querySelector('#container'));
+	_reactDom2.default.render(_react2.default.createElement(_reactRouter.Router,{history:_reactRouter.browserHistory},_react2.default.createElement(_reactRouter.Route,{path:'/',component:_App2.default})),document.querySelector('#container'));
 
 /***/ },
 /* 1 */
