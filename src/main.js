@@ -10,6 +10,7 @@ import ConsumerProfile from './components/consumerProfile/consumerProfile';
 import CookDashboard from './components/CookDashboard/CookDashboard';
 import CookProfile from './components/CookProfile/CookProfile';
 import CookSignUp from './components/CookSignUp/CookSignUp';
+import Login from './components/Login/Login';
 import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 
 // I followed the React Router tutorial to render different
@@ -20,6 +21,7 @@ render((
   <Router history={browserHistory}>
     <Route path="/" component={App}>
       <IndexRoute component={Landing}/>
+      <Route path="/login" component={Login}/>
       <Route path="/search" component={Search}/>
       <Route path="/consumerDashboard" component={ConsumerDashboard}/>
       <Route path="/consumerSignUp" component={ConsumerSignUp}/>
