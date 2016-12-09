@@ -19,6 +19,7 @@ class CookSignUp extends Component {
     this.updateSignUpPassword = this.updateSignUpPassword.bind(this);
     this.updateSignUpNeighborhood = this.updateSignUpNeighborhood.bind(this);
     this.updateSignUpAddress = this.updateSignUpAddress.bind(this);
+    this.handleCookCreation = this.handleCookCreation.bind(this);
   }
 
   updateSignUpName(e) {
@@ -62,6 +63,26 @@ class CookSignUp extends Component {
       cookSignUpNeighborhood: e.target.value
     });
   };
+
+
+  handleCookCreation() {
+    console.log('starting fetch');
+    fetch('/cooks', {
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+      method: 'POST',
+      body: JSON.stringify({
+        name: this.state.cookSignUpName,
+        email: this.state.cookSignUpEmail,
+        username: this.state.cookSignUpUsername,
+        password: this.state.cookSignUpPassword,
+        neighborhood: this.state.cookSignUpNeighborhood,
+        address: this.state.cookSignUpAddress
+      })
+    })
+    .catch(err => console.log(err));
+  }
 
   render() {
     return (
@@ -135,6 +156,8 @@ class CookSignUp extends Component {
               onChange={this.updateSignUpPassword}
             />
           </div>
+
+          <button onClick={this.handleCookCreation}>Sign Up</button>
 
         </div>
 

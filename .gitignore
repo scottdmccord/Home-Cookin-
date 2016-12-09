@@ -1,0 +1,2 @@
+# ignore our dot env file
+.env
