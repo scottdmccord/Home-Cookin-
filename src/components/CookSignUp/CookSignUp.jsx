@@ -9,11 +9,16 @@ class CookSignUp extends Component {
       cookSignUpEmail: '',
       cookSignUpUsername: '',
       cookSignUpPassword: '',
+      cookSignUpNeighborhood: '',
+      cookSignUpAddress: ''
     }
+
     this.updateSignUpName = this.updateSignUpName.bind(this);
     this.updateSignUpEmail = this.updateSignUpEmail.bind(this);
     this.updateSignUpUsername = this.updateSignUpUsername.bind(this);
     this.updateSignUpPassword = this.updateSignUpPassword.bind(this);
+    this.updateSignUpNeighborhood = this.updateSignUpNeighborhood.bind(this);
+    this.updateSignUpAddress = this.updateSignUpAddress.bind(this);
   }
 
   updateSignUpName(e) {
@@ -44,6 +49,19 @@ class CookSignUp extends Component {
     });
   };
 
+  updateSignUpAddress(e) {
+    console.log(e.target.value)
+    this.setState({
+      cookSignUpAddress: e.target.value
+    });
+  };
+
+  updateSignUpNeighborhood(e) {
+    console.log(e.target.value)
+    this.setState({
+      cookSignUpNeighborhood: e.target.value
+    });
+  };
 
   render() {
     return (
@@ -60,6 +78,28 @@ class CookSignUp extends Component {
               placeholder="Enter Name"
               value={this.state.cookSignUpName}
               onChange={this.updateSignUpName}
+            />
+          </div>
+
+          <div className="signup-address-div">
+            <label> Address: </label>
+            <input
+              className="signup address"
+              type="text"
+              placeholder="Enter address"
+              value={this.state.cookSignUpAddress}
+              onChange={this.updateSignUpAddress}
+            />
+          </div>
+
+          <div className="signup-neighborhood-div">
+            <label> Neighborhood: </label>
+            <input
+              className="signup neighborhood"
+              type="text"
+              placeholder="Enter Neighborhood"
+              value={this.state.cookSignUpNeighborhood}
+              onChange={this.updateSignUpNeighborhood}
             />
           </div>
 

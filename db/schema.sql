@@ -8,6 +8,8 @@ CREATE TABLE cooks (
   id SERIAL PRIMARY KEY,
   name VARCHAR NOT NULL,
   email VARCHAR NOT NULL,
+  neighborhood VARCHAR(25) NOT NULL,
+  address TEXT NOT NULL,
   username VARCHAR(20) NOT NULL,
   password VARCHAR NOT NULL,
   date_created TIMESTAMP NOT NULL DEFAULT NOW()
@@ -30,7 +32,6 @@ CREATE TABLE meals (
   quantity INT NOT NULL,
   pickup_day DATE NOT NULL,
   pickup_time TIME NOT NULL,
-  pickup_address TEXT NOT NULL,
   price INT NOT NULL,
   cook_id INT NOT NULL,
   date_created TIMESTAMP NOT NULL DEFAULT NOW()
