@@ -15,6 +15,7 @@ class ConsumerSignUp extends Component {
     this.updateSignUpEmail = this.updateSignUpEmail.bind(this);
     this.updateSignUpUsername = this.updateSignUpUsername.bind(this);
     this.updateSignUpPassword = this.updateSignUpPassword.bind(this);
+    this.handleConsumerCreation = this.handleConsumerCreation.bind(this);
   }
 
   updateSignUpName(e) {
@@ -49,8 +50,8 @@ class ConsumerSignUp extends Component {
     console.log('starting fetch');
     fetch('/consumers', {
       headers: {
-        'Content-type': 'application/json; charset=UTF-8'
-      }
+        'Content-type': 'application/json; charset=UTF-8',
+      },
       method: 'POST',
       body: JSON.stringify({
         name: this.state.consumerSignUpName,
@@ -97,7 +98,7 @@ class ConsumerSignUp extends Component {
               className="signup username"
               type="text"
               placeholder="Enter username"
-              value={this.state.cookSignUpUsername}
+              value={this.state.consumerSignUpUsername}
               onChange={this.updateSignUpUsername}
             />
           </div>
@@ -108,7 +109,7 @@ class ConsumerSignUp extends Component {
               className="signup password"
               type="text"
               placeholder="Enter password"
-              value={this.state.cookSignUpPassword}
+              value={this.state.consumerSignUpPassword}
               onChange={this.updateSignUpPassword}
             />
           </div>
