@@ -10,6 +10,7 @@ const path = require('path');
 
 // require our routers
 const cooksRouter = require('./routes/cooks');
+const consumersRouter = require('./routes/consumers');
 
 const app = express();
 const PORT = process.argv[2] || process.env.port || 3000;
@@ -23,6 +24,7 @@ app.use(bodyParser.json());
 
 // handle the routes
 app.use('/cooks', cooksRouter);
+app.use('/consumers', consumersRouter);
 
 // add an error handler
 app.use((err, req, res, next) => {
