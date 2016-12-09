@@ -1,12 +1,33 @@
 const db = require('../lib/dbConnect');
+const jwt = require('jsonwebtoken');
+const bcrypt = require('bcryptjs');
+
+const salt = 10;
 
 function createCook(req, res, next) {
   console.log("creating a cook");
-  db.none(`INSERT INTO cooks (name, email, username, password, neighborhood, address) Values ($1, $2, $3, $4, $5, $6)`, [req.body.name, req.body.email, req.body.username, req.body.password, req.body.neighborhood, req.body.address])
+  db.none(`INSERT INTO cooks (name, email, username, password, neighborhood, address) Values ($1, $2, $3, $4, $5, $6)`,
+    [req.body.name, req.body.email, req.body.username, bcrypt.hashSync(req.body.password, salt), req.body.neighborhood, req.body.address])
   .then(next())
   .catch(error => next(error));
 }
 
+function authenticateCook(req, res, next) {
+  db.one(`SELECT * FROM users WHERE username = $1`, req.body.username)
+    .then((data) => {
+      console.log(data.password)
+      const match = bcrypt.compareSync(req.body.password, data.password);
+      if (match) {
+        const myToken = jwt.sign({ username: req.body.username }, process.env.SECRET);
+        res.status(200).json(myToken);
+      } else {
+        res.status(500).send('wrong password')
+      }
+    })
+    .catch(error => console.log(error))
+}
+
 module.exports = {
-  createCook
+  createCook,
+  authenticateCook
 };

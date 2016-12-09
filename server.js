@@ -7,6 +7,9 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const logger = require('morgan');
 const path = require('path');
+const jwt = require('jsonwebtoken');
+const expressJWT = require('express-jwt');
+const bcrypt = require('bcryptjs');
 
 // require our routers
 const cooksRouter = require('./routes/cooks');
@@ -22,10 +25,15 @@ app.use(logger(isDev ? 'dev' : 'common'));
 // accept JSON formatted data
 app.use(bodyParser.json());
 
+// require secret for all routes except the following:
+// I followed the tutorial put together by Dan Peace to
+// better understand JWTs
+
 // handle the routes
 app.use('/cooks', cooksRouter);
 app.use('/consumers', consumersRouter);
 
+app.use(expressJWT({secret: process.env.SECRET}).unless({path: ['/', '/cooks', '/cooks/login', '/consumers']}));
 // add an error handler
 app.use((err, req, res, next) => {
   console.error(err, next);
