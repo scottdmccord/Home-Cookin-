@@ -32,7 +32,9 @@ app.use((err, req, res, next) => {
 app.use(express.static(path.join(__dirname, 'dist')));
 
 // to make react router work with browser history
-app.get('*', function (request, response){   response.sendFile(path.resolve(__dirname, 'dist', 'index.html')) })
+app.get('*', function (request, response){
+  response.sendFile(path.resolve(__dirname, 'dist', 'index.html'))
+})
 
 // start server
 app.listen(PORT);
