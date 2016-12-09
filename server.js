@@ -12,7 +12,7 @@ const path = require('path');
 const isDev = !('NODE_ENV' in process.env) && require('dotenv').config() && true;
 
 const app = express();
-const PORT = process.argv[2] || process.env.port || 3009;
+const PORT = process.argv[2] || process.env.port || 3000;
 
 // log resonse code
 app.use(logger(isDev ? 'dev' : 'common'));
@@ -30,6 +30,9 @@ app.use((err, req, res, next) => {
 });
 
 app.use(express.static(path.join(__dirname, 'dist')));
+
+// to make react router work with browser history
+app.get('*', function (request, response){   response.sendFile(path.resolve(__dirname, 'dist', 'index.html')) })
 
 // start server
 app.listen(PORT);
