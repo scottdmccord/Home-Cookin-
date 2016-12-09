@@ -8,6 +8,7 @@ CREATE TABLE cooks (
   id SERIAL PRIMARY KEY,
   name VARCHAR NOT NULL,
   email VARCHAR NOT NULL,
+  username VARCHAR(20) NOT NULL,
   password VARCHAR NOT NULL,
   date_created TIMESTAMP NOT NULL DEFAULT NOW()
 );
@@ -16,6 +17,7 @@ CREATE TABLE consumers (
   id SERIAL PRIMARY KEY,
   name VARCHAR NOT NULL,
   email VARCHAR NOT NULL,
+  username VARCHAR(20) NOT NULL,
   password VARCHAR NOT NULL,
   date_created TIMESTAMP NOT NULL DEFAULT NOW()
 );
