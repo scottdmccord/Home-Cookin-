@@ -8,10 +8,10 @@ CREATE TABLE cooks (
   id SERIAL PRIMARY KEY,
   name VARCHAR NOT NULL,
   email VARCHAR NOT NULL,
-  neighborhood VARCHAR(25) NOT NULL,
-  address TEXT NOT NULL,
   username VARCHAR(20) NOT NULL,
   password VARCHAR NOT NULL,
+  neighborhood VARCHAR(25) NOT NULL,
+  address TEXT NOT NULL,
   date_created TIMESTAMP NOT NULL DEFAULT NOW()
 );
 

@@ -1,0 +1,12 @@
+const db = require('../lib/dbConnect');
+
+function createCook(req, res, next) {
+  console.log("creating a cook, yeah yeah");
+  db.none(`INSERT INTO cooks (name, email, username, password, neighborhood, address) VALUES ($1, $2, $3, $4, $5, $6)`, [req.body.name, req.body.email, req.body.username, req.body.password, req.body.neighborhood, req.body.address])
+  .then(next())
+  .catch(error => next(error));
+}
+
+module.exports = {
+
+};
