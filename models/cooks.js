@@ -30,7 +30,18 @@ function authenticateCook(req, res, next) {
     .catch(error => console.log(error))
 }
 
+function getCooks(req, res, next) {
+  console.log('Getting all dem cooks.');
+  db.all(`SELECT username, name, neighborhood FROM cooks;`)
+    .then((cooks) => {
+      res.rows = cooks;
+      next();
+    })
+    .catch(error => console.log(error));
+}
+
 module.exports = {
   createCook,
-  authenticateCook
+  authenticateCook,
+  getCooks
 };
