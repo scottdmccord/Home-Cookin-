@@ -40,8 +40,19 @@ function getCooks(req, res, next) {
     .catch(error => console.log(error));
 }
 
+function getCooksByNeighborhood(req, res, next) {
+  console.log('Searching cooks by neighborhood: ', req.body.neighborhood);
+  db.any(`SELECT username, name, neighborhood FROM cooks WHERE neighborhood = $1`, req.body.neighborhood)
+    .then((cooks) => {
+      res.rows = cooks;
+      next();
+    })
+    .catch(error => console.log(error));
+}
+
 module.exports = {
   createCook,
   authenticateCook,
-  getCooks
+  getCooks,
+  getCooksByNeighborhood
 };

@@ -1,5 +1,5 @@
 const express = require('express');
-const { createCook, authenticateCook, getCooks } = require('../models/cooks.js');
+const { createCook, authenticateCook, getCooks, getCooksByNeighborhood } = require('../models/cooks.js');
 
 const cooksRouter = express.Router();
 
@@ -12,6 +12,8 @@ cooksRouter.post('/', createCook, (req, res) => {
 cooksRouter.post('/login', authenticateCook, (req, res, next) => {
   res.json({message: "successfully signed in"});
 });
+
+cooksRouter.post('/searchNeighborhood', getCooksByNeighborhood, sendJSONresp);
 
 cooksRouter.get('/displayAll', getCooks, sendJSONresp);
 
