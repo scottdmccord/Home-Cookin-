@@ -6,7 +6,8 @@ const salt = 10;
 
 function createConsumer(req, res, next) {
   console.log("creating a consumer");
-  db.none(`INSERT INTO consumers (name, email, username, password) Values ($1, $2, $3, $4)`, [req.body.name, req.body.email, req.body.username, req.body.password])
+  db.none(`INSERT INTO consumers (name, email, username, password) Values ($1, $2, $3, $4)`,
+    [req.body.name, req.body.email, req.body.username, bcrypt.hashSync(req.body.password, salt)])
   .then(next())
   .catch(error => next(error));
 }
@@ -25,7 +26,7 @@ function authenticateConsumer(req, res, next) {
         res.status(500).send('wrong password');
         console.log('wrong password');
       }
-    )}
+    })
     .catch(error => console.log(error));
 }
 

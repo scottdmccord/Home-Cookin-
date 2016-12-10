@@ -15,9 +15,12 @@ class Login extends Component {
       }
     }
 
-  this.updateLogInUsername = this.updateCookLogInUsername.bind(this);
-  this.updateLogInPassword = this.updateCookLogInPassword.bind(this);
+  this.updateCookLogInUsername = this.updateCookLogInUsername.bind(this);
+  this.updateCookLogInPassword = this.updateCookLogInPassword.bind(this);
   this.cooksLogin = this.cooksLogin.bind(this);
+  this.updateConsumerLogInUsername = this.updateConsumerLogInUsername.bind(this);
+  this.updateConsumerLogInPassword = this.updateConsumerLogInPassword.bind(this);
+  this.consumersLogin = this.consumersLogin.bind(this);
 
   }
 
