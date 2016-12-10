@@ -21,10 +21,19 @@ export default class App extends React.Component{
     });
   }
 
+  logOut() {
+    console.log('logging out');
+    this.setState({
+      currentToken: '',
+    })
+  }
+
   render(){
     return(
       <container>
-        <NavBar />
+        <NavBar
+          logOut={() => this.logOut()}
+        />
 
         {this.props.children && React.cloneElement(this.props.children, {
           state: this.state,
