@@ -13,7 +13,7 @@ function createCook(req, res, next) {
 }
 
 function authenticateCook(req, res, next) {
-  console.log('Perfomring user auth!');
+  console.log('Performing user auth (cook)!');
   db.one(`SELECT * FROM cooks WHERE username = $1`, req.body.username)
     .then((data) => {
       console.log(data.password)
