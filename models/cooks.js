@@ -13,15 +13,18 @@ function createCook(req, res, next) {
 }
 
 function authenticateCook(req, res, next) {
-  db.one(`SELECT * FROM users WHERE username = $1`, req.body.username)
+  console.log('Perfomring user auth!');
+  db.one(`SELECT * FROM cooks WHERE username = $1`, req.body.username)
     .then((data) => {
       console.log(data.password)
       const match = bcrypt.compareSync(req.body.password, data.password);
       if (match) {
         const myToken = jwt.sign({ username: req.body.username }, process.env.SECRET);
         res.status(200).json(myToken);
+        console.log('successful sign in');
       } else {
         res.status(500).send('wrong password')
+        console.log('wrong password!');
       }
     })
     .catch(error => console.log(error))
