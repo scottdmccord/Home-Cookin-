@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './CookSignUp.css';
 
 class CookSignUp extends Component {
   constructor(props) {
