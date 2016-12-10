@@ -27,7 +27,7 @@ app.use(bodyParser.json());
 
 // I followed the tutorial put together by Dan Peace to better understand JWTs
 // require secret for all routes except the following:
-app.use(expressJWT({secret: process.env.SECRET}).unless({path: ['/', '/favicon.ico', '/css/main.css', '/js/main.js', '/css/main.css.map', '/js/main.js.map', '/cooks', '/login', '/cooks/login', '/consumers', '/consumers/login', '/search', '/cookSignUp', '/consumerSignUp']}));
+app.use(expressJWT({secret: process.env.SECRET}).unless({path: ['/', '/favicon.ico', '/css/main.css', '/js/main.js', '/css/main.css.map', '/js/main.js.map', '/cooks', '/login', '/cooks/login', '/consumers', '/consumers/login', '/search', '/cookSignUp', '/consumerSignUp', '/cooks/displayAll']}));
 
 // handle the routes
 app.use('/cooks', cooksRouter);

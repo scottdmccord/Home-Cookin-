@@ -32,7 +32,7 @@ function authenticateCook(req, res, next) {
 
 function getCooks(req, res, next) {
   console.log('Getting all dem cooks.');
-  db.all(`SELECT username, name, neighborhood FROM cooks;`)
+  db.any(`SELECT username, name, neighborhood FROM cooks;`)
     .then((cooks) => {
       res.rows = cooks;
       next();
