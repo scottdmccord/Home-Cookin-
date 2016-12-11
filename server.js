@@ -14,6 +14,7 @@ const bcrypt = require('bcryptjs');
 // require our routers
 const cooksRouter = require('./routes/cooks');
 const consumersRouter = require('./routes/consumers');
+const mealsRouter = require('./routes/meals');
 
 const app = express();
 const PORT = process.argv[2] || process.env.port || 3000;
@@ -32,6 +33,7 @@ app.use(expressJWT({secret: process.env.SECRET}).unless({path: ['/', '/favicon.i
 // handle the routes
 app.use('/cooks', cooksRouter);
 app.use('/consumers', consumersRouter);
+app.use('/meals', mealsRouter);
 
 // add an error handler
 app.use((err, req, res, next) => {

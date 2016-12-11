@@ -97,7 +97,7 @@ class CookDashboard extends Component {
   }
 
   createMeal() {
-    fetch('/meal', {
+    fetch('/meals', {
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
       },
