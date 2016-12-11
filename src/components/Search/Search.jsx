@@ -25,9 +25,6 @@ class Search extends Component {
   }
 
   searchCooks(){
-    console.log('starting fetch');
-    console.log('PROPS ', this.props);
-    console.log(this.props.state.currentToken);
     fetch('/cooks/searchNeighborhood', {
       headers: {
         'Content-type': 'application/json; charset=UTF-8',

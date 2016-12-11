@@ -16,12 +16,9 @@ function authenticateCook(req, res, next) {
   console.log('Performing user auth (cook)!');
   db.one(`SELECT * FROM cooks WHERE username = $1`, req.body.username)
     .then((data) => {
-      console.log('COOK ID is: ', data.id)
-      console.log(data.password)
       const match = bcrypt.compareSync(req.body.password, data.password);
       if (match) {
         const cookID = data.id;
-        console.log(cookID, ' is the id');
         const myToken = jwt.sign({ username: req.body.username }, process.env.SECRET);
         res.status(200).json({ token: myToken, id: cookID});
         console.log('successful sign in');
@@ -32,11 +29,6 @@ function authenticateCook(req, res, next) {
     })
     .catch(error => console.log(error))
 }
-
-// function identifyCook(req, res, next) {
-//   console.log('Identifying the cook.');
-//   db.one(`SELECT * FROM cooks WHERE username = $1`)
-// }
 
 function getCooks(req, res, next) {
   console.log('Getting all dem cooks.');
@@ -58,9 +50,20 @@ function getCooksByNeighborhood(req, res, next) {
     .catch(error => console.log(error));
 }
 
+function getCookDashboard(req, res, next) {
+  console.log("this is the cook's id: ", req.body.cookID)
+  db.any(`SELECT * FROM cooks WHERE id = 1;`, req.body.cookID)
+    .then((cooks) => {
+      res.rows = cooks;
+      next();
+    })
+    .catch(error => console.log(error));
+}
+
 module.exports = {
   createCook,
   authenticateCook,
   getCooks,
-  getCooksByNeighborhood
+  getCooksByNeighborhood,
+  getCookDashboard
 };
