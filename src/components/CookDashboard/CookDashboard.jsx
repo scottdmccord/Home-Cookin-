@@ -5,12 +5,19 @@ class CookDashboard extends Component {
     super();
 
     this.state = {
-      cook: {},
+      cook: [],
     }
     this.displayCookDashboard = this.displayCookDashboard.bind(this);
   }
 
+  componentWillMount() {
+    console.log('Mounting now');
+    this.displayCookDashboard();
+    console.log('TEST: ', this.state.cook);
+  }
+
   displayCookDashboard(){
+    console.log('current token: ', this.props.state.currentToken);
     let cookID = this.props.state.cookID
     fetch('/cooks/cookDashboard', {
       headers: {
@@ -28,15 +35,18 @@ class CookDashboard extends Component {
           cook: cook
         })
       })
+      .then(() => {
+        console.log('cook object: ', this.state.cook)
+      })
   }
+        // <button onClick={this.displayCookDashboard}> Go! </button>
+        // <h1>Name: {this.state.cook[0].name}</h1>
+
 
   render() {
     return (
       <container>
         <h1> COOK DASHBOARD </h1>
-        <button onClick={this.displayCookDashboard}> Get cook </button>
-
-      {/*<h1>Name: {this.state.cook[0].name}</h1>*/}
       </container>
     )
   }

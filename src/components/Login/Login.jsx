@@ -149,7 +149,8 @@ class Login extends Component {
             />
           </div>
 
-          <button onClick={this.cooksLogin}><Link to="/cookDashboard">Enter</Link></button>
+          <button onClick={this.cooksLogin}>Enter</button>
+          <button><Link to="cookDashboard">Go to dashboard</Link></button>
 
         <h1> CONSUMER LOGIN </h1>
 
