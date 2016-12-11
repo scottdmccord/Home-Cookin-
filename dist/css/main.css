@@ -1,13 +1,13 @@
-.landingBody {
+/*.landingBody {
   background: url('http://i.imgur.com/fw2h12L.jpg') no-repeat center center fixed;
   background-size: cover;
   top: 0;
-/*  background-size: fill;*/
+  background-size: fill;
   height: 95vh;
   width: 100vw;
   border: solid black 2px;
-  /*background-color: blue;*/
-}
+  background-color: blue;
+}*/
 body {
   margin: 0;
 }
