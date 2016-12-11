@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 
 class Login extends Component {
   constructor(props) {
@@ -61,7 +62,8 @@ class Login extends Component {
       })
       .then(r => r.json())
       .then((data) => {
-        this.props.updateCurrentToken(data);
+        this.props.updateCurrentToken(data.token);
+        this.props.updateCookID(data.id);
         this.setState({
           cookLogIn: {
             username: '',
@@ -147,7 +149,7 @@ class Login extends Component {
             />
           </div>
 
-          <button onClick={this.cooksLogin}>Enter</button>
+          <button onClick={this.cooksLogin}><Link to="/cookDashboard">Enter</Link></button>
 
         <h1> CONSUMER LOGIN </h1>
 
