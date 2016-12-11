@@ -6,8 +6,22 @@ class CookDashboard extends Component {
 
     this.state = {
       cook: [],
+      inputCuisineType: '',
+      inputIngredients: '',
+      inputDescription: '',
+      inputQuantity: '',
+      inputPickupDay: '',
+      inputPickupTime: '',
+      inputPrice: ''
     }
     this.displayCookDashboard = this.displayCookDashboard.bind(this);
+    this.updateCuisineType = this.updateCuisineType.bind(this);
+    this.updateIngredients = this.updateIngredients.bind(this);
+    this.updateDescription = this.updateDescription.bind(this);
+    this.updateQuantity = this.updateQuantity.bind(this);
+    this.updatePickupDay = this.updatePickupDay.bind(this);
+    this.updatePickupTime = this.updatePickupTime.bind(this);
+    this.updatePrice = this.updatePrice.bind(this);
   }
 
   componentWillMount() {
@@ -39,6 +53,50 @@ class CookDashboard extends Component {
         console.log('cook object: ', this.state.cook)
       })
   }
+
+  updateCuisineType(e) {
+    this.setState({
+      inputCuisineType: e.target.value
+    })
+  }
+
+  updateIngredients(e) {
+    this.setState({
+      inputIngredients: e.target.value
+    })
+  }
+
+  updateDescription(e) {
+    this.setState({
+      inputDescription: e.target.value
+    })
+  }
+
+  updateQuantity(e) {
+    this.setState({
+      inputQuantity: e.target.value
+    })
+  }
+
+  updatePickupDay(e) {
+    this.setState({
+      inputPickupDay: e.target.value
+    })
+  }
+
+  updatePickupTime(e) {
+    this.setState({
+      inputPickupTime: e.target.value
+    })
+  }
+
+  updatePrice(e) {
+    this.setState({
+      inputPrice: e.target.value
+    })
+  }
+
+
         // <button onClick={this.displayCookDashboard}> Go! </button>
         // <h1>Name: {this.state.cook[0].name}</h1>
 
@@ -47,6 +105,84 @@ class CookDashboard extends Component {
     return (
       <container>
         <h1> COOK DASHBOARD </h1>
+
+        <div className="meal-input-container">
+
+          <h2> Start cooking! </h2>
+
+          <label>Cuisine Type: </label>
+
+          <input
+            className="cuisine-input"
+            type="text"
+            placeholder="Enter cuisine type"
+            value={this.state.inputCuisineType}
+            onChange={this.updateCuisineType}
+          />
+
+          <label>Ingredients: </label>
+
+          <input
+            className="ingredients-input"
+            type="text"
+            placeholder="Enter ingredients"
+            value={this.state.inputIngredients}
+            onChange={this.updateIngredients}
+          />
+
+          <label>Description: </label>
+
+          <input
+            className="description-input"
+            type="text"
+            placeholder="Enter description"
+            value={this.state.inputDescription}
+            onChange={this.updateDescription}
+          />
+
+          <label>Number of meals: </label>
+
+          <input
+            className="quantity-input"
+            type="text"
+            placeholder="Enter quantity"
+            value={this.state.inputQuantity}
+            onChange={this.updateQuantity}
+          />
+
+          <label>Pickup day: </label>
+
+          <input
+            className="pickupDay-input"
+            type="text"
+            placeholder="Enter pickup day"
+            value={this.state.inputPickupDay}
+            onChange={this.updatePickupDay}
+          />
+
+          <label>Pickup time: </label>
+
+          <input
+            className="pickupTime-input"
+            type="text"
+            placeholder="Enter pickup time"
+            value={this.state.inputCuisineType}
+            onChange={this.updatePickupTime}
+          />
+
+          <label>Price: </label>
+
+          <input
+            className="price-input"
+            type="text"
+            placeholder="Enter price"
+            value={this.state.inputPrice}
+            onChange={this.updatePrice}
+          />
+
+        </div>
+
+
       </container>
     )
   }
