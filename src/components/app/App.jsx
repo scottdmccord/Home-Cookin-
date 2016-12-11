@@ -12,7 +12,7 @@ export default class App extends React.Component{
     this.state = {
       currentToken: '',
       cookID: '',
-      consumerID: ''
+      consumerID: '',
     }
 
   }

@@ -22,6 +22,7 @@ class CookDashboard extends Component {
     this.updatePickupDay = this.updatePickupDay.bind(this);
     this.updatePickupTime = this.updatePickupTime.bind(this);
     this.updatePrice = this.updatePrice.bind(this);
+    this.createMeal = this.createMeal.bind(this);
   }
 
   componentWillMount() {
@@ -100,6 +101,7 @@ class CookDashboard extends Component {
     fetch('/meals', {
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
+        'Authorization': `Bearer ` + this.props.state.currentToken,
       },
       method: 'POST',
       body: JSON.stringify({
@@ -111,6 +113,17 @@ class CookDashboard extends Component {
         pickup_time: this.state.inputPickupTime,
         price: this.state.inputPrice,
         cook_id: this.props.state.cookID
+      })
+    })
+    .then(() => {
+      this.setState({
+        inputCuisineType: '',
+        inputIngredients: '',
+        inputDescription: '',
+        inputQuantity: '',
+        inputPickupDay: '',
+        inputPickupTime: '',
+        inputPrice: ''
       })
     })
     .catch(err => console.log(err));
@@ -186,7 +199,7 @@ class CookDashboard extends Component {
             className="pickupTime-input"
             type="text"
             placeholder="Enter pickup time"
-            value={this.state.inputCuisineType}
+            value={this.state.inputPickupTime}
             onChange={this.updatePickupTime}
           />
 
@@ -200,6 +213,7 @@ class CookDashboard extends Component {
             onChange={this.updatePrice}
           />
 
+          <button onClick={this.createMeal}> Submit! </button>
         </div>
 
 

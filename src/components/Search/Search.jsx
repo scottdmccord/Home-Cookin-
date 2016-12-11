@@ -15,6 +15,21 @@ class Search extends Component {
     this.renderCooks = this.renderCooks.bind(this);
     this.updateNeighborhood = this.updateNeighborhood.bind(this);
     this.searchCooks = this.searchCooks.bind(this);
+    this.hideSearchPage = this.hideSearchPage.bind(this);
+  }
+
+componentDidMount() {
+  this.hideSearchPage();
+}
+
+
+  hideSearchPage() {
+    console.log('rendering page');
+    console.log('this is id: ', this.props.state.cookID);
+    if(this.props.state.cookID !== '') {
+      console.log('this is id: ', this.props.state.cookID);
+      document.querySelector('.error-modal').style.display = 'none'
+    }
   }
 
   updateNeighborhood(e) {
@@ -74,6 +89,8 @@ class Search extends Component {
   render() {
     return (
       <container>
+
+        <div className="error-modal">Please log in!</div>
         <h1> SEARCH FOR THINGS! </h1>
 
         <input
