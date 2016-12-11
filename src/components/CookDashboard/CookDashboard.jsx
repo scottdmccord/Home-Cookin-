@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './CookDashboard.css';
 
 class CookDashboard extends Component {
   constructor(props) {
@@ -23,12 +24,23 @@ class CookDashboard extends Component {
     this.updatePickupTime = this.updatePickupTime.bind(this);
     this.updatePrice = this.updatePrice.bind(this);
     this.createMeal = this.createMeal.bind(this);
+    this.hideDashboard = this.hideDashboard.bind(this);
   }
 
   componentWillMount() {
     console.log('Mounting now');
     this.displayCookDashboard();
     console.log('TEST: ', this.state.cook);
+  }
+
+  componentDidMount() {
+    this.hideDashboard();
+  }
+
+  hideDashboard() {
+    if(this.props.state.cookID !== '') {
+      document.querySelector('.error-modal').style.display = 'none'
+    }
   }
 
   displayCookDashboard(){
@@ -137,6 +149,7 @@ class CookDashboard extends Component {
   render() {
     return (
       <container>
+        <div className="error-modal">Please log in as a cook!</div>
         <h1> COOK DASHBOARD </h1>
 
         <div className="meal-input-container">
