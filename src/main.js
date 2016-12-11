@@ -30,5 +30,8 @@ render((
       <Route path="/cookSignUp" component={CookSignUp}/>
       <Route path="/cookProfile" component={CookProfile}/>
     </Route>
+    <Route path='/app' component={actualApp} 
+      <Route path='/blewyourmind' component={wholenewballgame}/>
+    />
   </Router>
 ), document.querySelector('#container'));
