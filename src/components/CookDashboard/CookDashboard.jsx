@@ -96,6 +96,26 @@ class CookDashboard extends Component {
     })
   }
 
+  createMeal() {
+    fetch('/meal', {
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+      method: 'POST',
+      body: JSON.stringify({
+        cuisine_type: this.state.inputCuisineType,
+        ingredients: this.state.inputIngredients,
+        description: this.state.inputDescription,
+        quantity: this.state.inputQuantity,
+        pickup_day: this.state.inputPickupDay,
+        pickup_time: this.state.inputPickupTime,
+        price: this.state.inputPrice,
+        cook_id: this.props.state.cookID
+      })
+    })
+    .catch(err => console.log(err));
+  }
+
 
         // <button onClick={this.displayCookDashboard}> Go! </button>
         // <h1>Name: {this.state.cook[0].name}</h1>
