@@ -7,6 +7,20 @@ function createMeal(req, res, next) {
     .catch(error => next(error));
 }
 
+function getMealsByNeighborhood(req, res, next) {
+  db.any(`SELECT meals.cuisine_type, meals.ingredients, meals.description, cooks.name, cooks.id, cooks.neighborhood
+          FROM meals
+          INNER JOIN cooks
+          on meals.cook_id = cooks.id
+          WHERE cooks.neighborhood = $1;`, req.body.neighborhood)
+    .then((meals) => {
+      res.rows = meals;
+      next();
+    })
+    .catch(error => console.log(error));
+}
+
 module.exports = {
-  createMeal
+  createMeal,
+  getMealsByNeighborhood
 }
