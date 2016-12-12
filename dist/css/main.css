@@ -56,5 +56,21 @@ body {
   top: 0;
   z-index: 0;
 }
+.error-modal {
+  height: 100%;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  top: 0;
+  z-index: 1;
+}
+
+.dashboard-page {
+  height: 100%;
+  width: 100%;
+  display: none;
+  top: 0;
+  z-index: 0;
+}
 
 /*# sourceMappingURL=main.css.map*/

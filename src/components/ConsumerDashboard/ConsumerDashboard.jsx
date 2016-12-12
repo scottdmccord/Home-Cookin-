@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import MealSearchItem from '../MealSearchItem/MealSearchItem.jsx'
+import './ConsumerDashboard.css'
 
 class ConsumerDashboard extends Component {
   constructor(props) {
@@ -11,6 +13,7 @@ class ConsumerDashboard extends Component {
     this.hideModal = this.hideModal.bind(this);
     this.updateNeighborhood = this.updateNeighborhood.bind(this);
     this.searchMeals = this.searchMeals.bind(this);
+    this.renderMeals = this.renderMeals.bind(this);
   }
 
   componentDidMount() {
@@ -49,8 +52,20 @@ class ConsumerDashboard extends Component {
       console.log(this.state.meals);
     })
     .catch(err => console.log(err));
+    this.renderMeals();
   }
 
+  renderMeals() {
+    return this.state.meals.map((meal, i) =>
+      <MealSearchItem
+        key={i}
+        cook={meal.name}
+        cuisine={meal.cuisine_type}
+        ingredients={meal.ingredients}
+        description={meal.description}
+      />
+    );
+  }
 
 
   render() {
@@ -74,6 +89,10 @@ class ConsumerDashboard extends Component {
 
             <button onClick={this.searchMeals}>Search!</button>
           </div>
+        </div>
+
+        <div className="meal-search-items">
+          {this.renderMeals()}
         </div>
 
       </div>
