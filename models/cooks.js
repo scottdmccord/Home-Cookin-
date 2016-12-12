@@ -52,7 +52,7 @@ function getCooksByNeighborhood(req, res, next) {
 
 function getCookDashboard(req, res, next) {
   console.log("this is the cook's id: ", req.body.cookID)
-  db.any(`SELECT * FROM cooks WHERE id = 1;`, req.body.cookID)
+  db.any(`SELECT * FROM cooks WHERE id = $1;`, req.body.cookID)
     .then((cooks) => {
       res.rows = cooks;
       next();

@@ -1,7 +1,16 @@
 .error-modal {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   display: block;
+  overflow: hidden;
+  top: 0;
+  z-index: 1;
+}
+
+.search-page {
+  height: 100%;
+  width: 100%;
+  display: none;
   overflow: hidden;
   top: 0;
   z-index: 1;

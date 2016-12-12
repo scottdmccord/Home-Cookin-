@@ -28,7 +28,8 @@ componentDidMount() {
     console.log('this is id: ', this.props.state.cookID);
     if(this.props.state.cookID !== '') {
       console.log('this is id: ', this.props.state.cookID);
-      document.querySelector('.error-modal').style.display = 'none'
+      document.querySelector('.error-modal').style.display = 'none';
+      document.querySelector('.search-page').style.display = 'block';
     }
   }
 
@@ -91,21 +92,23 @@ componentDidMount() {
       <container>
 
         <div className="error-modal">Please log in!</div>
-        <h1> SEARCH FOR THINGS! </h1>
+        <div className="search-page">
+          <h1> SEARCH FOR THINGS! </h1>
 
-        <input
-          className="neighborhood-input"
-          type="text"
-          placeholder="Enter neighborhood"
-          value={this.state.neighborhood}
-          onChange={this.updateNeighborhood}
-        />
+          <input
+            className="neighborhood-input"
+            type="text"
+            placeholder="Enter neighborhood"
+            value={this.state.neighborhood}
+            onChange={this.updateNeighborhood}
+          />
 
 
-        <button onClick={this.searchCooks}>Get Cooks</button>
+          <button onClick={this.searchCooks}>Get Cooks</button>
 
-        <div className="cookContainer">
-          {this.renderCooks()}
+          <div className="cookContainer">
+            {this.renderCooks()}
+          </div>
         </div>
       </container>
     )

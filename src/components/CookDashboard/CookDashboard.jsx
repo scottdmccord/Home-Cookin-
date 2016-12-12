@@ -39,7 +39,8 @@ class CookDashboard extends Component {
 
   hideDashboard() {
     if(this.props.state.cookID !== '') {
-      document.querySelector('.error-modal').style.display = 'none'
+      document.querySelector('.error-modal').style.display = 'none';
+      document.querySelector('.dashboard-page').style.display = 'block';
     }
   }
 
@@ -149,84 +150,87 @@ class CookDashboard extends Component {
   render() {
     return (
       <container>
+
         <div className="error-modal">Please log in as a cook!</div>
-        <h1> COOK DASHBOARD </h1>
+        <div className="dashboard-page">
+          <h1> COOK DASHBOARD </h1>
 
-        <div className="meal-input-container">
+          <div className="meal-input-container">
 
-          <h2> Start cooking! </h2>
+            <h2> Start cooking! </h2>
 
-          <label>Cuisine Type: </label>
+            <label>Cuisine Type: </label>
 
-          <input
-            className="cuisine-input"
-            type="text"
-            placeholder="Enter cuisine type"
-            value={this.state.inputCuisineType}
-            onChange={this.updateCuisineType}
-          />
+            <input
+              className="cuisine-input"
+              type="text"
+              placeholder="Enter cuisine type"
+              value={this.state.inputCuisineType}
+              onChange={this.updateCuisineType}
+            />
 
-          <label>Ingredients: </label>
+            <label>Ingredients: </label>
 
-          <input
-            className="ingredients-input"
-            type="text"
-            placeholder="Enter ingredients"
-            value={this.state.inputIngredients}
-            onChange={this.updateIngredients}
-          />
+            <input
+              className="ingredients-input"
+              type="text"
+              placeholder="Enter ingredients"
+              value={this.state.inputIngredients}
+              onChange={this.updateIngredients}
+            />
 
-          <label>Description: </label>
+            <label>Description: </label>
 
-          <input
-            className="description-input"
-            type="text"
-            placeholder="Enter description"
-            value={this.state.inputDescription}
-            onChange={this.updateDescription}
-          />
+            <input
+              className="description-input"
+              type="text"
+              placeholder="Enter description"
+              value={this.state.inputDescription}
+              onChange={this.updateDescription}
+            />
 
-          <label>Number of meals: </label>
+            <label>Number of meals: </label>
 
-          <input
-            className="quantity-input"
-            type="text"
-            placeholder="Enter quantity"
-            value={this.state.inputQuantity}
-            onChange={this.updateQuantity}
-          />
+            <input
+              className="quantity-input"
+              type="text"
+              placeholder="Enter quantity"
+              value={this.state.inputQuantity}
+              onChange={this.updateQuantity}
+            />
 
-          <label>Pickup day: </label>
+            <label>Pickup day: </label>
 
-          <input
-            className="pickupDay-input"
-            type="text"
-            placeholder="Enter pickup day"
-            value={this.state.inputPickupDay}
-            onChange={this.updatePickupDay}
-          />
+            <input
+              className="pickupDay-input"
+              type="text"
+              placeholder="Enter pickup day"
+              value={this.state.inputPickupDay}
+              onChange={this.updatePickupDay}
+            />
 
-          <label>Pickup time: </label>
+            <label>Pickup time: </label>
 
-          <input
-            className="pickupTime-input"
-            type="text"
-            placeholder="Enter pickup time"
-            value={this.state.inputPickupTime}
-            onChange={this.updatePickupTime}
-          />
+            <input
+              className="pickupTime-input"
+              type="text"
+              placeholder="Enter pickup time"
+              value={this.state.inputPickupTime}
+              onChange={this.updatePickupTime}
+            />
 
-          <label>Price: </label>
+            <label>Price: </label>
 
-          <input
-            className="price-input"
-            type="text"
-            placeholder="Enter price"
-            value={this.state.inputPrice}
-            onChange={this.updatePrice}
-          />
+            <input
+              className="price-input"
+              type="text"
+              placeholder="Enter price"
+              value={this.state.inputPrice}
+              onChange={this.updatePrice}
+            />
 
-          <button onClick={this.createMeal}> Submit! </button>
+            <button onClick={this.createMeal}> Submit! </button>
+          </div>
         </div>
 
 
