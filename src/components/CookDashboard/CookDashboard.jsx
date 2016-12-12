@@ -46,7 +46,7 @@ class CookDashboard extends Component {
 
   displayCookDashboard(){
     console.log('current token: ', this.props.state.currentToken);
-    let cookID = this.props.state.cookID
+    let cookID = this.props.state.cookID;
     fetch('/cooks/cookDashboard', {
       headers: {
         'Content-type': 'application/json; charset=UTF-8',

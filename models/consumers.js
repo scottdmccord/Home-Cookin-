@@ -30,7 +30,18 @@ function authenticateConsumer(req, res, next) {
     .catch(error => console.log(error));
 }
 
+function getConsumerDashboard(req, res, next) {
+  console.log("this is the consumer's id: ", req.body.consumerID)
+  db.any(`SELECT * FROM consumers WHERE id = $1;`, req.body.consumerID)
+    .then((consumers) => {
+      res.rows = consumers;
+      next();
+    })
+    .catch(error => console.log(error));
+}
+
 module.exports = {
   createConsumer,
-  authenticateConsumer
+  authenticateConsumer,
+  getConsumerDashboard
 }

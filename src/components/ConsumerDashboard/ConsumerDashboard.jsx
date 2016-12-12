@@ -7,6 +7,7 @@ class ConsumerDashboard extends Component {
     super();
 
     this.state = {
+      consumer: [],
       meals: [],
       neighborhood: ''
     }
@@ -14,6 +15,12 @@ class ConsumerDashboard extends Component {
     this.updateNeighborhood = this.updateNeighborhood.bind(this);
     this.searchMeals = this.searchMeals.bind(this);
     this.renderMeals = this.renderMeals.bind(this);
+    this.displayConsumerDashboard = this.displayConsumerDashboard.bind(this);
+  }
+
+  componentWillMount() {
+    console.log('Mounting now');
+    this.displayConsumerDashboard();
   }
 
   componentDidMount() {
@@ -25,6 +32,29 @@ class ConsumerDashboard extends Component {
       document.querySelector('.error-modal').style.display = 'none';
       document.querySelector('.dashboard-page').style.display = 'block';
     }
+  }
+
+  displayConsumerDashboard(){
+    let consumerID = this.props.state.consumerID;
+    fetch('/consumers/consumerDashboard', {
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+        'Authorization': `Bearer ` + this.props.state.currentToken,
+      },
+      method: 'POST',
+      body: JSON.stringify({
+        consumerID: consumerID
+      })
+    })
+    .then(r => r.json())
+    .then((consumer) => {
+      this.setState({
+        consumer: consumer
+      })
+    })
+    .then(() => {
+      console.log('consumer object: ', this.state.consumerID)
+    })
   }
 
   updateNeighborhood(e) {
