@@ -144,7 +144,7 @@ class CookDashboard extends Component {
 
 
         // <button onClick={this.displayCookDashboard}> Go! </button>
-        // <h1>Name: {this.state.cook[0].name}</h1>
+          // <h1>Name: {this.state.cook[0].name}</h1>
 
 
   render() {
