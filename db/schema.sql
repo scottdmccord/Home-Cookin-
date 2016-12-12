@@ -30,6 +30,7 @@ CREATE TABLE meals (
   ingredients TEXT NOT NULL,
   description TEXT NOT NULL,
   quantity INT NOT NULL,
+  counter INT NOT NULL,
   pickup_day DATE NOT NULL,
   pickup_time TIME NOT NULL,
   price INT NOT NULL,

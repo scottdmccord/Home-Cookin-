@@ -1,13 +1,16 @@
 /*.landingBody {
   background: url('http://i.imgur.com/fw2h12L.jpg') no-repeat center center fixed;
   background-size: cover;
+  background-position: center bottom;
   top: 0;
   background-size: fill;
-  height: 95vh;
-  width: 100vw;
+  height: 92vh;
+  width: vw;
   border: solid black 2px;
+  z-index: -1
   background-color: blue;
-}*/
+}
+*/
 body {
   margin: 0;
 }
@@ -15,7 +18,7 @@ body {
 .nav-bar {
   width: 100%;
   background-color: #ABABAB;
-  height: 50px;
+  height: 5vh;
   font-size: 25px;
 }
 

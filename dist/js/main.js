@@ -8573,7 +8573,7 @@
   \**********************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";Object.defineProperty(exports,"__esModule",{value:true});var _react=__webpack_require__(/*! react */ 1);var _react2=_interopRequireDefault(_react);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var MealSearchItem=function MealSearchItem(props){return _react2.default.createElement("div",{className:"mealSearchItem"},_react2.default.createElement("h4",null,"Cook: ",props.cook),_react2.default.createElement("p",null,"Cuisine type: ",props.cuisine),_react2.default.createElement("p",null,"Ingredients: ",props.ingredients),_react2.default.createElement("p",null,"Description: ",props.description));};exports.default=MealSearchItem;
+	"use strict";Object.defineProperty(exports,"__esModule",{value:true});var _react=__webpack_require__(/*! react */ 1);var _react2=_interopRequireDefault(_react);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var MealSearchItem=function MealSearchItem(props){return _react2.default.createElement("div",{className:"mealSearchItem"},_react2.default.createElement("h4",null,"Cook: ",props.cook),_react2.default.createElement("p",null,"Cuisine type: ",props.cuisine),_react2.default.createElement("p",null,"Ingredients: ",props.ingredients),_react2.default.createElement("p",null,"Description: ",props.description),_react2.default.createElement("button",null,"Book meal!"));};exports.default=MealSearchItem;
 
 /***/ },
 /* 251 */

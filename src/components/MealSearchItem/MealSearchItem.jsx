@@ -6,6 +6,7 @@ const MealSearchItem = props => (
     <p>Cuisine type: {props.cuisine}</p>
     <p>Ingredients: {props.ingredients}</p>
     <p>Description: {props.description}</p>
+    <button>Book meal!</button>
   </div>
 )
 
