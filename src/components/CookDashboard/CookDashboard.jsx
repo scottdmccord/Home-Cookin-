@@ -6,6 +6,7 @@ class CookDashboard extends Component {
     super();
 
     this.state = {
+      upcomingMeals: [],
       cook: [],
       inputCuisineType: '',
       inputIngredients: '',
@@ -25,11 +26,13 @@ class CookDashboard extends Component {
     this.updatePrice = this.updatePrice.bind(this);
     this.createMeal = this.createMeal.bind(this);
     this.hideDashboard = this.hideDashboard.bind(this);
+    this.getUpcomingMeals = this.getUpcomingMeals.bind(this);
   }
 
   componentWillMount() {
     console.log('Mounting now');
     this.displayCookDashboard();
+    this.getUpcomingMeals();
     console.log('TEST: ', this.state.cook);
   }
 
@@ -142,6 +145,33 @@ class CookDashboard extends Component {
     .catch(err => console.log(err));
   }
 
+  getUpcomingMeals(){
+    fetch('/meals/renderCookMealsUpcoming', {
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+        'Authorization': `Bearer ` + this.props.state.currentToken
+      },
+      method: 'POST',
+      body: JSON.stringify({
+        cookID: this.props.state.cookID
+      })
+    })
+    .then(r => r.json())
+    .then((meals) => {
+      this.setState({
+        upcomingMeals: meals
+      })
+      console.log(this.state.upcomingMeals);
+    })
+    .catch(err => console.log(err));
+  }
+
+  renderUpcomingMeals(){
+
+  }
+
+
+
 
         // <button onClick={this.displayCookDashboard}> Go! </button>
           // <h1>Name: {this.state.cook[0].name}</h1>
@@ -231,6 +261,12 @@ class CookDashboard extends Component {
 
             <button onClick={this.createMeal}> Submit! </button>
           </div>
+
+          <div className="upcoming-meal-container">
+          </div>
+
+
+
         </div>
 
 

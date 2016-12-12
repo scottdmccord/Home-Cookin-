@@ -20,7 +20,17 @@ function getMealsByNeighborhood(req, res, next) {
     .catch(error => console.log(error));
 }
 
+function getUpcomingMealsByCook(req, res, next) {
+  db.any(`SELECT * FROM meals WHERE cook_id = $1`, req.body.cookID)
+  .then((meals) => {
+    res.rows = meals;
+    next();
+  })
+  .catch(error => console.log(error));
+}
+
 module.exports = {
   createMeal,
-  getMealsByNeighborhood
+  getMealsByNeighborhood,
+  getUpcomingMealsByCook
 }

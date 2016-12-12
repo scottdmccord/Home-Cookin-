@@ -1,5 +1,5 @@
 const express = require('express');
-const { createMeal, getMealsByNeighborhood } = require('../models/meals.js')
+const { createMeal, getMealsByNeighborhood, getUpcomingMealsByCook } = require('../models/meals.js')
 
 const mealsRouter = express.Router();
 
@@ -10,5 +10,6 @@ mealsRouter.post('/', createMeal, (req, res) => {
 })
 
 mealsRouter.post('/searchNeighborhood', getMealsByNeighborhood, sendJSONresp);
+mealsRouter.post('/renderCookMealsUpcoming', getUpcomingMealsByCook, sendJSONresp);
 
 module.exports = mealsRouter;
