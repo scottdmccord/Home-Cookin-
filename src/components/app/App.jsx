@@ -29,6 +29,12 @@ export default class App extends React.Component{
     });
   }
 
+  updateConsumerID(consumerID) {
+    this.setState({
+      consumerID: consumerID
+    });
+  }
+
   logOut() {
     console.log('logging out');
     this.setState({
@@ -48,7 +54,8 @@ export default class App extends React.Component{
         {this.props.children && React.cloneElement(this.props.children, {
           state: this.state,
           updateCurrentToken: this.updateCurrentToken.bind(this),
-          updateCookID: this.updateCookID.bind(this)
+          updateCookID: this.updateCookID.bind(this),
+          updateConsumerID: this.updateConsumerID.bind(this)
         })}
 
 

@@ -110,7 +110,8 @@ class Login extends Component {
       })
       .then(r => r.json())
       .then((data) => {
-        this.props.updateCurrentToken(data);
+        this.props.updateCurrentToken(data.token);
+        this.props.updateConsumerID(data.id)
         this.setState({
           consumerLogIn: {
             username: '',
