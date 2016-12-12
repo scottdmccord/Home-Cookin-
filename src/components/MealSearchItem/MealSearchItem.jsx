@@ -5,8 +5,23 @@ class MealSearchItem extends Component {
     super();
 
     this.state = {
-
     }
+    this.bookMeal = this.bookMeal.bind(this);
+  }
+
+  bookMeal(){
+    fetch('/meals/bookMeal', {
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+        'Authorization': `Bearer ` + this.props.token,
+      },
+      method: 'POST',
+      body: JSON.stringify({
+        meal_id: this.props.id,
+        consumer_id: this.props.consumerID
+      })
+    })
+    .catch(err => console.log(err));
   }
 
   render(){
@@ -17,24 +32,10 @@ class MealSearchItem extends Component {
         <p>Ingredients: {this.props.ingredients}</p>
         <p>Description: {this.props.description}</p>
         <p>Numer left: {this.props.counter}</p>
-        <button>Book meal!</button>
+        <button onClick={this.bookMeal}>Book meal!</button>
       </div>
     )
   }
 }
 
 export default MealSearchItem;
-
-
-// const MealSearchItem = props => (
-//   <div className="mealSearchItem">
-//     <h4>Cook: {props.cook}</h4>
-//     <p>Cuisine type: {props.cuisine}</p>
-//     <p>Ingredients: {props.ingredients}</p>
-//     <p>Description: {props.description}</p>
-//     <p>Numer left: {props.counter}</p>
-//     <button>Book meal!</button>
-//   </div>
-// )
-
-// export default MealSearchItem;

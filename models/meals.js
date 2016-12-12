@@ -8,7 +8,7 @@ function createMeal(req, res, next) {
 }
 
 function getMealsByNeighborhood(req, res, next) {
-  db.any(`SELECT meals.cuisine_type, meals.ingredients, meals.description, cooks.name, cooks.id, cooks.neighborhood, meals.counter
+  db.any(`SELECT meals.cuisine_type, meals.ingredients, meals.description, cooks.name, cooks.id, cooks.neighborhood, meals.counter, meals.id, meals.pickup_day, meals.pickup_time
           FROM meals
           INNER JOIN cooks
           on meals.cook_id = cooks.id
@@ -29,8 +29,16 @@ function getUpcomingMealsByCook(req, res, next) {
   .catch(error => console.log(error));
 }
 
+function bookMeal(req, res, next) {
+  console.log("Inserting meal!");
+  db.none(`INSERT INTO meal_counter (meal_id, consumer_id) VALUES ($1, $2)`, [req.body.meal_id, req.body.consumer_id])
+    .then(next())
+    .catch(error => next(error));
+}
+
 module.exports = {
   createMeal,
   getMealsByNeighborhood,
-  getUpcomingMealsByCook
+  getUpcomingMealsByCook,
+  bookMeal
 }

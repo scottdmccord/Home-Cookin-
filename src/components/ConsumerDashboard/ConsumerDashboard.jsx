@@ -53,7 +53,7 @@ class ConsumerDashboard extends Component {
       })
     })
     .then(() => {
-      console.log('consumer object: ', this.state.consumerID)
+      console.log('consumer object: ', this.props.state.consumerID)
     })
   }
 
@@ -94,6 +94,11 @@ class ConsumerDashboard extends Component {
         ingredients={meal.ingredients}
         description={meal.description}
         counter={meal.counter}
+        id={meal.id}
+        pickup_time={meal.pickup_time}
+        pickup_day={meal.pickup_day}
+        token={this.props.state.currentToken}
+        consumerID={this.props.state.consumerID}
       />
     );
   }
