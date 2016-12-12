@@ -178,6 +178,7 @@ class Login extends Component {
         </div>
 
         <button onClick={this.consumersLogin}>Enter</button>
+        <button><Link to="consumerDashboard">Go to dashboard</Link></button>
 
       </container>
     )
