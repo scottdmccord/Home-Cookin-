@@ -26,7 +26,7 @@ componentDidMount() {
   hideSearchPage() {
     console.log('rendering page');
     console.log('this is id: ', this.props.state.cookID);
-    if(this.props.state.cookID !== '') {
+    if(this.props.state.cookID !== '' || this.props.state.consumerID !== '') {
       console.log('this is id: ', this.props.state.cookID);
       document.querySelector('.error-modal').style.display = 'none';
       document.querySelector('.search-page').style.display = 'block';
