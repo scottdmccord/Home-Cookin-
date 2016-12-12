@@ -21,7 +21,7 @@ function getMealsByNeighborhood(req, res, next) {
 }
 
 function getUpcomingMealsByCook(req, res, next) {
-  db.any(`SELECT * FROM meals WHERE cook_id = $1`, req.body.cookID)
+  db.any(`SELECT * FROM meals WHERE cook_id = $1 AND pickup_day >= CURRENT_DATE;`, req.body.cookID)
   .then((meals) => {
     res.rows = meals;
     next();

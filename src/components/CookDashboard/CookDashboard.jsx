@@ -169,7 +169,6 @@ class CookDashboard extends Component {
   render() {
     return (
       <container>
-        <button onClick={this.displayCookDashboard}> Go! </button>
 
         <div className="error-modal">Please log in as a cook!</div>
         <div className="dashboard-page">
