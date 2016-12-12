@@ -93,6 +93,7 @@ class ConsumerDashboard extends Component {
         cuisine={meal.cuisine_type}
         ingredients={meal.ingredients}
         description={meal.description}
+        counter={meal.counter}
       />
     );
   }

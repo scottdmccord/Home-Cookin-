@@ -8,7 +8,7 @@ function createMeal(req, res, next) {
 }
 
 function getMealsByNeighborhood(req, res, next) {
-  db.any(`SELECT meals.cuisine_type, meals.ingredients, meals.description, cooks.name, cooks.id, cooks.neighborhood
+  db.any(`SELECT meals.cuisine_type, meals.ingredients, meals.description, cooks.name, cooks.id, cooks.neighborhood, meals.counter
           FROM meals
           INNER JOIN cooks
           on meals.cook_id = cooks.id

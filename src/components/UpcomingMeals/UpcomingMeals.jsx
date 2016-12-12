@@ -6,7 +6,7 @@ const UpcomingMeals = (props) => {
     props.meals.map((meal, i) =>
       <UpcomingMealItem
         key={i}
-        cuisine={meal.cusine_type}
+        cuisine={meal.cuisine_type}
         ingredients={meal.ingredients}
         description={meal.description}
         quantity={meal.quantity}
