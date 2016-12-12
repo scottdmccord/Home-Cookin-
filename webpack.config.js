@@ -34,7 +34,7 @@ const config = {
       xhtml:      true,
       inject:     false,
       template:   htmlTemplate,
-      appMountId: 'container',
+      appMountId: 'root-container',
     }),
     new ExtractTextPlugin('/css/[name].css', {
       allChunks: true,

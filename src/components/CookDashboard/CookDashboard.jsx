@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './CookDashboard.css';
+import UpcomingMeals from '../UpcomingMeals/UpcomingMeals.jsx';
 
 class CookDashboard extends Component {
   constructor(props) {
@@ -7,7 +8,7 @@ class CookDashboard extends Component {
 
     this.state = {
       upcomingMeals: [],
-      cook: [],
+      cook: {name: "n/a"},
       inputCuisineType: '',
       inputIngredients: '',
       inputDescription: '',
@@ -29,15 +30,12 @@ class CookDashboard extends Component {
     this.getUpcomingMeals = this.getUpcomingMeals.bind(this);
   }
 
-  componentWillMount() {
+  componentDidMount() {
     console.log('Mounting now');
     this.displayCookDashboard();
     this.getUpcomingMeals();
-    console.log('TEST: ', this.state.cook);
-  }
-
-  componentDidMount() {
     this.hideDashboard();
+    console.log('TEST: ', this.state.cook);
   }
 
   hideDashboard() {
@@ -63,7 +61,8 @@ class CookDashboard extends Component {
       .then(r => r.json())
       .then((cook) => {
         this.setState({
-          cook: cook
+          cook: cook[0],
+          cookName: cook[0].name,
         })
       })
       .then(() => {
@@ -158,6 +157,7 @@ class CookDashboard extends Component {
     })
     .then(r => r.json())
     .then((meals) => {
+      console.log('meals', meals)
       this.setState({
         upcomingMeals: meals
       })
@@ -166,25 +166,15 @@ class CookDashboard extends Component {
     .catch(err => console.log(err));
   }
 
-  renderUpcomingMeals(){
-
-  }
-
-
-
-
-        // <button onClick={this.displayCookDashboard}> Go! </button>
-          // <h1>Name: {this.state.cook[0].name}</h1>
-
-
   render() {
     return (
       <container>
+        <button onClick={this.displayCookDashboard}> Go! </button>
 
         <div className="error-modal">Please log in as a cook!</div>
         <div className="dashboard-page">
           <h1> COOK DASHBOARD </h1>
-
+          <h1>Name: {this.state.cook.name}</h1>
           <div className="meal-input-container">
 
             <h2> Start cooking! </h2>
@@ -261,10 +251,7 @@ class CookDashboard extends Component {
 
             <button onClick={this.createMeal}> Submit! </button>
           </div>
-
-          <div className="upcoming-meal-container">
-          </div>
-
+          <UpcomingMeals meals={this.state.upcomingMeals} />
 
 
         </div>

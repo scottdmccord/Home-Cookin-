@@ -28,7 +28,6 @@ class Login extends Component {
 
     // COOKS login and authorization
     updateCookLogInUsername(e){
-      console.log(e.target.value)
       this.setState({
         cookLogIn: {
           username: e.target.value,
@@ -38,7 +37,6 @@ class Login extends Component {
     }
 
     updateCookLogInPassword(e){
-      console.log(e.target.value)
       this.setState({
         cookLogIn: {
           username: this.state.cookLogIn.username,
@@ -77,7 +75,6 @@ class Login extends Component {
 
     // CONSUMERS login and authorization
     updateConsumerLogInUsername(e) {
-      console.log(e.target.value)
       this.setState({
         consumerLogIn: {
           username: e.target.value,
@@ -87,7 +84,6 @@ class Login extends Component {
     }
 
     updateConsumerLogInPassword(e) {
-      console.log(e.target.value);
       this.setState({
         consumerLogIn: {
           username: this.state.consumerLogIn.username,
