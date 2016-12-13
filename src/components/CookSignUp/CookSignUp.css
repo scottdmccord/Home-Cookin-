@@ -1,0 +1,25 @@
+.cook-signup-page {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+}
+
+.signup-content {
+  display: inline-flex;
+  height: 100%;
+  width: 60%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.signup-photo-div {
+  display: inline-flex;
+  height: 100%;
+  width: 40%;
+  align-items: center;
+  justify-content: center;
+  background: url('http://i.imgur.com/STOrTH2.jpg') center;
+  background-size: cover;
+}

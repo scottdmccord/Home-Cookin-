@@ -1,30 +1,111 @@
-/*.landingBody {
-  background: url('http://i.imgur.com/fw2h12L.jpg') no-repeat center center fixed;
-  background-size: cover;
+.landingBody {
+/*  background: url('http://i.imgur.com/fw2h12L.jpg') no-repeat center center fixed;
+  background-size: cover;*/
   background-position: center bottom;
+  background-color:;
   top: 0;
-  background-size: fill;
-  height: 92vh;
-  width: vw;
-  border: solid black 2px;
-  z-index: -1
-  background-color: blue;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
-*/
+
+.title-box {
+  height: 40%;
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  margin: 0;
+  margin-top: 30%;
+  display: block;
+  font-size: 6em;
+  color: rgb(47, 38, 31);
+  text-shadow: 2px 2px #D3D3D3;
+  font-family: 'Indie Flower', cursive;
+/*  background-color: rgba(242, 222, 120, 0.4);*/
+}
+
+.signup-box {
+  height: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.signup {
+  display: inline-flex;
+  margin: 0 3%;
+  align-items: center;
+  justify-content: center;
+  height: 20%;
+  width: 20%;
+  margin-bottom: 10%;
+  border-radius: 2em;
+  background-color: rgb(32, 183, 204);
+}
+
+.signup-link {
+  font-family: 'Scada', sans-serif;
+  font-size: 1.5em;
+  text-decoration: none;
+  color: black;
+}
 body {
   margin: 0;
 }
 
 .nav-bar {
   width: 100%;
-  background-color: #ABABAB;
-  height: 5vh;
+  background-color: rgb(32, 183, 204);
+  height: 100%;
   font-size: 25px;
 }
 
 .nav {
   display: inline-block;
   margin: 5px 10px;
+}
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(246, 222, 120);
+}
+
+#root-container {
+  height: 100%;
+  width: 100%;
+}
+
+.global-flex {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+}
+
+.navbar-flex {
+  display: inline-block;
+  width: 100%;
+  height: 5%;
+  margin: 0;
+}
+
+.body-flex {
+  display: inline-block;
+  width: 100%;
+  height: 95%;
 }
 .error-modal {
   height: 100%;
@@ -74,6 +155,31 @@ body {
   display: none;
   top: 0;
   z-index: 0;
+}
+.cook-signup-page {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+}
+
+.signup-content {
+  display: inline-flex;
+  height: 100%;
+  width: 60%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.signup-photo-div {
+  display: inline-flex;
+  height: 100%;
+  width: 40%;
+  align-items: center;
+  justify-content: center;
+  background: url('http://i.imgur.com/STOrTH2.jpg') center;
+  background-size: cover;
 }
 
 /*# sourceMappingURL=main.css.map*/

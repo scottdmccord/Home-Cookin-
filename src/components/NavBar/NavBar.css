@@ -4,8 +4,8 @@ body {
 
 .nav-bar {
   width: 100%;
-  background-color: #ABABAB;
-  height: 5vh;
+  background-color: rgb(32, 183, 204);
+  height: 100%;
   font-size: 25px;
 }
 

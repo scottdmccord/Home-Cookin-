@@ -3,6 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Landing from '../Landing/Landing';
 import NavBar from '../NavBar/NavBar';
+import './App.css';
 
 // create react component for App
 export default class App extends React.Component{
@@ -47,18 +48,28 @@ export default class App extends React.Component{
   render(){
     return(
       <container>
-        <NavBar
-          logOut={() => this.logOut()}
-        />
+        <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Scada" rel="stylesheet"/>
 
-        {this.props.children && React.cloneElement(this.props.children, {
-          state: this.state,
-          updateCurrentToken: this.updateCurrentToken.bind(this),
-          updateCookID: this.updateCookID.bind(this),
-          updateConsumerID: this.updateConsumerID.bind(this)
-        })}
+        <div className="global-flex">
 
+          <div className="navbar-flex">
+            <NavBar
+              logOut={() => this.logOut()}
+            />
+          </div>
 
+            <div className="body-flex">
+
+            {this.props.children && React.cloneElement(this.props.children, {
+              state: this.state,
+              updateCurrentToken: this.updateCurrentToken.bind(this),
+              updateCookID: this.updateCookID.bind(this),
+              updateConsumerID: this.updateConsumerID.bind(this)
+            })}
+
+            </div>
+
+        </div>
       </container>
     )
   }

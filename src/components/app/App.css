@@ -1,0 +1,36 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(246, 222, 120);
+}
+
+#root-container {
+  height: 100%;
+  width: 100%;
+}
+
+.global-flex {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+}
+
+.navbar-flex {
+  display: inline-block;
+  width: 100%;
+  height: 5%;
+  margin: 0;
+}
+
+.body-flex {
+  display: inline-block;
+  width: 100%;
+  height: 95%;
+}

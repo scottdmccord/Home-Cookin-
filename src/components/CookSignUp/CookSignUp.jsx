@@ -87,7 +87,9 @@ class CookSignUp extends Component {
 
   render() {
     return (
-      <container>
+      <container className="cook-signup-page">
+
+        <div className="signup-content">
         <h1> COOK SIGN UP </h1>
 
         <div className="signup-container">
@@ -95,7 +97,7 @@ class CookSignUp extends Component {
           <div className="signup-name-div">
             <label> Name: </label>
             <input
-              className="signup name"
+              className="signup-input name"
               type="text"
               placeholder="Enter Name"
               value={this.state.cookSignUpName}
@@ -106,7 +108,7 @@ class CookSignUp extends Component {
           <div className="signup-address-div">
             <label> Address: </label>
             <input
-              className="signup address"
+              className="signup-input address"
               type="text"
               placeholder="Enter address"
               value={this.state.cookSignUpAddress}
@@ -117,7 +119,7 @@ class CookSignUp extends Component {
           <div className="signup-neighborhood-div">
             <label> Neighborhood: </label>
             <input
-              className="signup neighborhood"
+              className="signup-input neighborhood"
               type="text"
               placeholder="Enter Neighborhood"
               value={this.state.cookSignUpNeighborhood}
@@ -128,7 +130,7 @@ class CookSignUp extends Component {
           <div className="signup-email-div">
             <label> Email: </label>
             <input
-              className="signup email"
+              className="signup-input email"
               type="text"
               placeholder="Enter Email"
               value={this.state.cookSignUpEmail}
@@ -139,7 +141,7 @@ class CookSignUp extends Component {
           <div className="signup-username-div">
             <label> Username: </label>
             <input
-              className="signup username"
+              className="signup-input username"
               type="text"
               placeholder="Enter Username"
               value={this.state.cookSignUpUsername}
@@ -150,7 +152,7 @@ class CookSignUp extends Component {
           <div className="signup-password-div">
             <label> Password: </label>
             <input
-              className="signup password"
+              className="signup-input password"
               type="text"
               placeholder="Enter Password"
               value={this.state.cookSignUpPassword}
@@ -160,6 +162,10 @@ class CookSignUp extends Component {
 
           <button onClick={this.handleCookCreation}>Sign Up</button>
 
+        </div>
+        </div>
+
+        <div className="signup-photo-div">
         </div>
 
       </container>
