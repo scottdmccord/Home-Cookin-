@@ -9,13 +9,15 @@ class ConsumerDashboard extends Component {
     this.state = {
       consumer: [],
       meals: [],
-      neighborhood: ''
+      neighborhood: '',
+      upcomingMeals: ''
     }
     this.hideModal = this.hideModal.bind(this);
     this.updateNeighborhood = this.updateNeighborhood.bind(this);
     this.searchMeals = this.searchMeals.bind(this);
     this.renderMeals = this.renderMeals.bind(this);
     this.displayConsumerDashboard = this.displayConsumerDashboard.bind(this);
+    this.getUpcomingConsumerMeals = this.getUpcomingConsumerMeals.bind(this);
   }
 
   componentWillMount() {
@@ -25,6 +27,7 @@ class ConsumerDashboard extends Component {
 
   componentDidMount() {
     this.hideModal();
+    this.getUpcomingConsumerMeals();
   }
 
   hideModal() {
@@ -101,6 +104,28 @@ class ConsumerDashboard extends Component {
         consumerID={this.props.state.consumerID}
       />
     );
+  }
+
+  getUpcomingConsumerMeals() {
+    fetch('/meals/renderConsumerMealsUpcoming', {
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+        'Authorization': `Bearer ` + this.props.state.currentToken,
+      },
+      method: 'POST',
+      body: JSON.stringify({
+        consumerID: this.props.state.consumerID
+      })
+    })
+    .then(r => r.json())
+    .then((meals) => {
+      console.log('meals', meals)
+      this.setState({
+        upcomingMeals: meals
+      })
+      console.log(this.state.upcomingMeals)
+    })
+    .catch(err => console.log(err));
   }
 
 

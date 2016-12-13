@@ -29,6 +29,20 @@ function getUpcomingMealsByCook(req, res, next) {
   .catch(error => console.log(error));
 }
 
+function getUpcomingMealsByConsumer(req, res, next) {
+  console.log('pulling consumer meals');
+  db.any(`SELECT meal_counter.meal_id, meals.cuisine_type, meals.description, meals.pickup_day, meals.pickup_time, meals.price
+          FROM meal_counter
+          INNER JOIN meals
+          ON meal_counter.meal_id = meals.id
+          WHERE meal_counter.consumer_id = $1`, req.body.consumerID)
+    .then((meals) => {
+      res.rows = meals;
+      next();
+    })
+    .catch(error => console.log(error));
+}
+
 function bookMeal(req, res, next) {
   console.log("Inserting meal!");
   db.none(`INSERT INTO meal_counter (meal_id, consumer_id) VALUES ($1, $2)`, [req.body.meal_id, req.body.consumer_id])
@@ -40,5 +54,6 @@ module.exports = {
   createMeal,
   getMealsByNeighborhood,
   getUpcomingMealsByCook,
+  getUpcomingMealsByConsumer,
   bookMeal
 }
