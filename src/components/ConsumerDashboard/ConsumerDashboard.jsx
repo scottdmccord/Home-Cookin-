@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import MealSearchItem from '../MealSearchItem/MealSearchItem.jsx'
+import MealSearchItem from '../MealSearchItem/MealSearchItem.jsx';
+import UpcomingConsumerMeals from '../UpcomingConsumerMeals/UpcomingConsumerMeals.jsx';
 import './ConsumerDashboard.css'
 
 class ConsumerDashboard extends Component {
@@ -10,7 +11,7 @@ class ConsumerDashboard extends Component {
       consumer: [],
       meals: [],
       neighborhood: '',
-      upcomingMeals: ''
+      upcomingMeals: []
     }
     this.hideModal = this.hideModal.bind(this);
     this.updateNeighborhood = this.updateNeighborhood.bind(this);
@@ -20,14 +21,10 @@ class ConsumerDashboard extends Component {
     this.getUpcomingConsumerMeals = this.getUpcomingConsumerMeals.bind(this);
   }
 
-  componentWillMount() {
-    console.log('Mounting now');
-    this.displayConsumerDashboard();
-  }
-
   componentDidMount() {
     this.hideModal();
     this.getUpcomingConsumerMeals();
+    this.displayConsumerDashboard();
   }
 
   hideModal() {
@@ -152,9 +149,13 @@ class ConsumerDashboard extends Component {
           </div>
         </div>
 
+        <h2> Meal Search </h2>
         <div className="meal-search-items">
           {this.renderMeals()}
         </div>
+
+        <UpcomingConsumerMeals meals={this.state.upcomingMeals}
+        />
 
       </div>
       </container>
