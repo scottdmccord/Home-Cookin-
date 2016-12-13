@@ -80,7 +80,33 @@ body {
   margin: 0;
   height: 100%;
   width: 100%;
-  background-color: rgb(246, 222, 120);
+/*  background-color: rgb(246, 222, 120);*/
+background-color: #FAFAFA;
+}
+
+label {
+  margin-right: 25px;
+/*  font-family: 'Sanchez', serif;*/
+  font-family: 'Allura', cursive;
+  font-size: 20px;
+}
+
+input {
+  height: 25px;
+  width: 200px;
+  margin-top: 8px;
+  font-family: 'Sanchez', serif;
+  /*font-family: 'Allura', cursive;*/
+  font-size: 15px;
+}
+
+button {
+  height: 30px;
+  width: 150px;
+  font-family: 'Sanchez', serif;
+  font-size: 15px;
+/*  background-color: rgb(246, 222, 120);*/
+/*  color: rgb( 48, 104, 168);*/
 }
 
 #root-container {
@@ -181,5 +207,49 @@ body {
   background: url('http://i.imgur.com/STOrTH2.jpg') center;
   background-size: cover;
 }
+
+.cook-signup-header {
+  display: flex;
+  height: 20%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Allura', cursive;
+}
+
+.signup-title {
+  margin-top: 100px;
+}
+
+.signup-container {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20%;
+}
+
+.signup-second-container {
+  height: 80%;
+  width: 60%;
+}
+
+.signup-input-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  margin: 25px 0px;
+}
+
+.button-container {
+  display: flex;
+  width: 100%;
+/*  justify-content: left;*/
+/*  align-items: center;*/
+}
+
+
 
 /*# sourceMappingURL=main.css.map*/

@@ -7,7 +7,33 @@ body {
   margin: 0;
   height: 100%;
   width: 100%;
-  background-color: rgb(246, 222, 120);
+/*  background-color: rgb(246, 222, 120);*/
+background-color: #FAFAFA;
+}
+
+label {
+  margin-right: 25px;
+/*  font-family: 'Sanchez', serif;*/
+  font-family: 'Allura', cursive;
+  font-size: 20px;
+}
+
+input {
+  height: 25px;
+  width: 200px;
+  margin-top: 8px;
+  font-family: 'Sanchez', serif;
+  /*font-family: 'Allura', cursive;*/
+  font-size: 15px;
+}
+
+button {
+  height: 30px;
+  width: 150px;
+  font-family: 'Sanchez', serif;
+  font-size: 15px;
+/*  background-color: rgb(246, 222, 120);*/
+/*  color: rgb( 48, 104, 168);*/
 }
 
 #root-container {
