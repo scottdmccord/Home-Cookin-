@@ -48,7 +48,7 @@ export default class App extends React.Component{
   render(){
     return(
       <container>
-        <link href="https://fonts.googleapis.com/css?family=Allura|Indie+Flower|Sanchez|Scada" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Noto+Serif|Allura|Indie+Flower|Sanchez|Scada" rel="stylesheet"/>
 
         <div className="global-flex">
 

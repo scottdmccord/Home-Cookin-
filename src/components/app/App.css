@@ -14,7 +14,7 @@ background-color: #FAFAFA;
 label {
   margin-right: 25px;
 /*  font-family: 'Sanchez', serif;*/
-  font-family: 'Allura', cursive;
+  font-family: 'Noto Serif', serif;
   font-size: 20px;
 }
 
@@ -34,6 +34,11 @@ button {
   font-size: 15px;
 /*  background-color: rgb(246, 222, 120);*/
 /*  color: rgb( 48, 104, 168);*/
+}
+
+h1 {
+  font-family: 'Indie Flower', cursive;
+  text-align: center;
 }
 
 #root-container {
@@ -59,4 +64,16 @@ button {
   display: inline-block;
   width: 100%;
   height: 95%;
+}
+
+.dashboard-form-input {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.dashboard-submit {
+  margin-top: 13px;
+  height: 30px;
+  width: 100px;
 }

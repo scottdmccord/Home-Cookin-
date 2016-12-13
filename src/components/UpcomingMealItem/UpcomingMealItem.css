@@ -1,0 +1,27 @@
+.upcomingMealItem {
+  margin-bottom: 20px;
+}
+
+.meal-heading {
+  margin:0;
+  background-color: yellow;
+  font-family: 'Noto Serif', serif;
+}
+
+.row-odd {
+  margin: 0;
+  font-family: 'Noto Serif', serif;
+}
+
+.row-even {
+  margin: 0;
+  background-color: grey;
+  font-family: 'Noto Serif', serif;
+}
+
+.row-end {
+  margin: 0;
+  background-color: grey;
+  font-family: 'Noto Serif', serif;
+}
+

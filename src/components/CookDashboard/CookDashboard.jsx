@@ -172,13 +172,21 @@ class CookDashboard extends Component {
 
         <div className="error-modal">Please log in as a cook!</div>
         <div className="dashboard-page">
-          <h1> COOK DASHBOARD </h1>
-          <h1>Name: {this.state.cook.name}</h1>
-          <div className="meal-input-container">
 
-            <h2> Start cooking! </h2>
+        <div className="dashboard-header">
+          <h1 className="dashboard-header-text"> Welcome, {this.state.cook.name}. What are you cooking today?</h1>
+        </div>
 
-            <label>Cuisine Type: </label>
+        <div  className="dashboard-body">
+
+          <div className="dashboard-column1">
+
+            <h1> Make a Meal </h1>
+
+            <div className="dashboard-form-holder">
+
+            <div className="dashboard-form-input">
+            <label className="dashboard-label">Cuisine Type: </label>
 
             <input
               className="cuisine-input"
@@ -187,8 +195,10 @@ class CookDashboard extends Component {
               value={this.state.inputCuisineType}
               onChange={this.updateCuisineType}
             />
+            </div>
 
-            <label>Ingredients: </label>
+            <div className="dashboard-form-input">
+            <label className="dashboard-label">Ingredients: </label>
 
             <input
               className="ingredients-input"
@@ -197,8 +207,10 @@ class CookDashboard extends Component {
               value={this.state.inputIngredients}
               onChange={this.updateIngredients}
             />
+            </div>
 
-            <label>Description: </label>
+            <div className="dashboard-form-input">
+            <label className="dashboard-label">Description: </label>
 
             <input
               className="description-input"
@@ -207,9 +219,11 @@ class CookDashboard extends Component {
               value={this.state.inputDescription}
               onChange={this.updateDescription}
             />
+            </div>
 
-            <label>Number of meals: </label>
+            <label className="dashboard-label">Number of meals: </label>
 
+            <div className="dashboard-form-input">
             <input
               className="quantity-input"
               type="text"
@@ -217,8 +231,11 @@ class CookDashboard extends Component {
               value={this.state.inputQuantity}
               onChange={this.updateQuantity}
             />
+            </div>
 
-            <label>Pickup day: </label>
+
+            <div className="dashboard-form-input">
+            <label className="dashboard-label">Pickup day: </label>
 
             <input
               className="pickupDay-input"
@@ -227,8 +244,10 @@ class CookDashboard extends Component {
               value={this.state.inputPickupDay}
               onChange={this.updatePickupDay}
             />
+            </div>
 
-            <label>Pickup time: </label>
+            <div className="dashboard-form-input">
+            <label className="dashboard-label">Pickup time: </label>
 
             <input
               className="pickupTime-input"
@@ -237,8 +256,10 @@ class CookDashboard extends Component {
               value={this.state.inputPickupTime}
               onChange={this.updatePickupTime}
             />
+            </div>
 
-            <label>Price: </label>
+            <div className="dashboard-form-input">
+            <label className="dashboard-label">Price: </label>
 
             <input
               className="price-input"
@@ -247,10 +268,25 @@ class CookDashboard extends Component {
               value={this.state.inputPrice}
               onChange={this.updatePrice}
             />
+            </div>
 
-            <button onClick={this.createMeal}> Submit! </button>
+            <button className="dashboard-submit" onClick={this.createMeal}> Submit! </button>
+            </div>
+
+            </div>
+
+            <div className="dashboard-column2">
+
+                <h1> Upcoming Meals </h1>
+
+              <UpcomingMeals meals={this.state.upcomingMeals}/>
+            </div>
+
+            <div className="dashboard-column3"></div>
+
           </div>
-          <UpcomingMeals meals={this.state.upcomingMeals} />
+
+
 
 
         </div>

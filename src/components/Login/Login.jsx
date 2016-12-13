@@ -154,7 +154,7 @@ class Login extends Component {
         </div>
 
         <div className="login-container">
-          <h1> CONSUMER LOGIN </h1>
+          <h1> USER LOGIN </h1>
 
           <div className="login-input-div">
             <label> Username: </label>

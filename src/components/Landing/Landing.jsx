@@ -12,8 +12,8 @@ class Landing extends Component {
           </div>
 
           <div className="signup-box">
-            <div className="cook signup"><Link className="signup-link" to="/cookSignUp">Sign up as cook</Link></div>
-            <div className="consumer signup"><Link className="signup-link" to="/consumerSignUp">Sign up as user</Link></div>
+            <div className="signup"><Link className="signup-link" to="/cookSignUp">Sign up as cook</Link></div>
+            <div className="signup"><Link className="signup-link" to="/consumerSignUp">Sign up as user</Link></div>
           </div>
         </div>
         <div className="landingEmpty"></div>

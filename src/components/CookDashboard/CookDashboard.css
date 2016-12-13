@@ -10,7 +10,60 @@
 .dashboard-page {
   height: 100%;
   width: 100%;
-  display: none;
-  top: 0;
-  z-index: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.dashboard-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10%;
+  width: 100%;
+}
+
+.dashboard-header-text {
+  margin: 0;
+  height: 50px;
+}
+
+.dashboard-body {
+  height: 85%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.dashboard-column1 {
+  height:100%;
+  width: 30%;
+  border: solid black 2px;
+  margin: 0 3%;
+}
+
+.dashboard-column2 {
+  height: 100%;
+  width: 30%;
+  border: solid black 2px;
+  margin: 0 3%;
+  overflow-y: scroll;
+}
+
+.dashboard-column3 {
+  height: 100%;
+  width: 30%;
+  border: solid black 2px;
+  margin: 0 3%;
+}
+
+.dashboard-form-holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dashboard-label {
+  margin-top: 20px;
 }
