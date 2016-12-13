@@ -19,6 +19,7 @@ class ConsumerDashboard extends Component {
     this.renderMeals = this.renderMeals.bind(this);
     this.displayConsumerDashboard = this.displayConsumerDashboard.bind(this);
     this.getUpcomingConsumerMeals = this.getUpcomingConsumerMeals.bind(this);
+    this.unbookMeal = this.unbookMeal.bind(this);
   }
 
   componentDidMount() {
@@ -125,6 +126,24 @@ class ConsumerDashboard extends Component {
     .catch(err => console.log(err));
   }
 
+  unbookMeal(id) {
+    fetch(`/meals/unbookMeal/${id}`, {
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+        'Authorization': `Bearer ` + this.props.state.currentToken,
+      },
+      method: 'delete'
+    })
+    .then(() => {
+      console.log('unbooked meal');
+      // let meals = this.state.upcomingMeals.filter((meal) => {
+      //   return meal.id !== id;
+      // });
+      // this.setSate({ meals })
+    })
+    .catch(err => console.log(err));
+  }
+
 
   render() {
     return (
@@ -154,7 +173,9 @@ class ConsumerDashboard extends Component {
           {this.renderMeals()}
         </div>
 
-        <UpcomingConsumerMeals meals={this.state.upcomingMeals}
+        <UpcomingConsumerMeals
+          meals={this.state.upcomingMeals}
+          unbookMeal={this.unbookMeal}
         />
 
       </div>

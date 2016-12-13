@@ -31,7 +31,7 @@ function getUpcomingMealsByCook(req, res, next) {
 
 function getUpcomingMealsByConsumer(req, res, next) {
   console.log('pulling consumer meals');
-  db.any(`SELECT meal_counter.meal_id, meals.cuisine_type, meals.description, meals.pickup_day, meals.pickup_time, meals.price
+  db.any(`SELECT meal_counter.id, meal_counter.meal_id, meals.cuisine_type, meals.description, meals.pickup_day, meals.pickup_time, meals.price
           FROM meal_counter
           INNER JOIN meals
           ON meal_counter.meal_id = meals.id
@@ -50,10 +50,19 @@ function bookMeal(req, res, next) {
     .catch(error => next(error));
 }
 
+function unbookMeal(req, res, next) {
+  console.log('this is the param: ', req.params)
+  console.log("removing meal");
+  db.none(`DELETE FROM meal_counter where id = $1;`, req.params.id)
+    .then(next())
+    .catch(err => next(err));
+}
+
 module.exports = {
   createMeal,
   getMealsByNeighborhood,
   getUpcomingMealsByCook,
   getUpcomingMealsByConsumer,
-  bookMeal
+  bookMeal,
+  unbookMeal
 }

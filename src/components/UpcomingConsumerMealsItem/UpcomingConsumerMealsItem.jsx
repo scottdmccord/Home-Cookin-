@@ -8,6 +8,7 @@ const UpcomingConsumerMealsItem = props => (
     <p> Price: {props.price} </p>
     <p> Pickup day: {props.pickup_day} </p>
     <p> Pickup time: {props.pickup_time} </p>
+    <button onClick={() => props.unbookMeal(props.id)}> Remove </button>
   </div>
 )
 
