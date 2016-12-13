@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './ConsumerSignUp.css'
 
 class ConsumerSignUp extends Component {
   constructor(props) {
@@ -65,60 +66,72 @@ class ConsumerSignUp extends Component {
 
   render() {
     return (
-      <container>
-        <h1> CONSUMER SIGN UP </h1>
+      <container className="signup-page">
 
-        <div className="signup-container">
-
-          <div className="signup-name-div">
-            <label> Name: </label>
-            <input
-              className="signup name"
-              type="text"
-              placeholder="Enter Name"
-              value={this.state.consumerSignUpName}
-              onChange={this.updateSignUpName}
-            />
-          </div>
-
-          <div className="signup-email-div">
-            <label> Email: </label>
-            <input
-              className="signup email"
-              type="text"
-              placeholder="Enter email"
-              value={this.state.consumerSignUpEmail}
-              onChange={this.updateSignUpEmail}
-            />
-          </div>
-
-          <div className="signup-username-div">
-            <label> Username: </label>
-            <input
-              className="signup username"
-              type="text"
-              placeholder="Enter username"
-              value={this.state.consumerSignUpUsername}
-              onChange={this.updateSignUpUsername}
-            />
-          </div>
-
-          <div className="signup-password-div">
-            <label> Password: </label>
-            <input
-              className="signup password"
-              type="text"
-              placeholder="Enter password"
-              value={this.state.consumerSignUpPassword}
-              onChange={this.updateSignUpPassword}
-            />
-          </div>
-
-          <button onClick={this.handleConsumerCreation}>Sign Up</button>
-
+        <div className="signup-photo-div-consumer">
+      {/*photo by christopher baker,
+      http://www.realsimple.com/food-recipes/recipe-collections-favorites/quick-easy/fast-dinner-recipes-0*/}
         </div>
 
+        <div className="signup-content">
+          <div className="cook-signup-header">
+            <h1 className="signup-title"> CONSUMER SIGN UP </h1>
+          </div>
 
+          <div className="signup-container-consumer">
+            <div className="signup-second-container-consumer">
+
+              <div className="signup-input-div">
+                <label> Name: </label>
+                <input
+                  className="signup-input name"
+                  type="text"
+                  placeholder="Enter Name"
+                  value={this.state.consumerSignUpName}
+                  onChange={this.updateSignUpName}
+                />
+              </div>
+
+              <div className="signup-input-div">
+                <label> Email: </label>
+                <input
+                  className="signup-input email"
+                  type="text"
+                  placeholder="Enter email"
+                  value={this.state.consumerSignUpEmail}
+                  onChange={this.updateSignUpEmail}
+                />
+              </div>
+
+              <div className="signup-input-div">
+                <label> Username: </label>
+                <input
+                  className="signup-input username"
+                  type="text"
+                  placeholder="Enter username"
+                  value={this.state.consumerSignUpUsername}
+                  onChange={this.updateSignUpUsername}
+                />
+              </div>
+
+              <div className="signup-input-div">
+                <label> Password: </label>
+                <input
+                  className="signup-input password"
+                  type="text"
+                  placeholder="Enter password"
+                  value={this.state.consumerSignUpPassword}
+                  onChange={this.updateSignUpPassword}
+                />
+              </div>
+
+            <div className="button-container">
+              <button onClick={this.handleConsumerCreation}>Sign Up</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
 
       </container>
     )

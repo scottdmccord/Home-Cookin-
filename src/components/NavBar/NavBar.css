@@ -4,7 +4,7 @@ body {
 
 .nav-bar {
   width: 100%;
-  background-color: rgb(32, 183, 204);
+  background-color: rgb(47, 38, 31);
   height: 100%;
   font-size: 25px;
 }
@@ -12,4 +12,9 @@ body {
 .nav {
   display: inline-block;
   margin: 5px 10px;
+}
+
+.nav-text {
+  color: #FAFAFA;
+  font-family: 'Indie Flower', cursive;
 }

@@ -1,10 +1,18 @@
 .landingBody {
-/*  background: url('http://i.imgur.com/fw2h12L.jpg') no-repeat center center fixed;
-  background-size: cover;*/
+  background: url('http://i.imgur.com/fw2h12L.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+}
+
+.landingContent {
   background-position: center bottom;
   background-color:;
   top: 0;
   height: 100%;
+  width: 57%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,8 +20,13 @@
   flex-wrap: wrap;
 }
 
+.landingEmpty {
+  height: 100%;
+  width: 43%;
+}
+
 .title-box {
-  height: 40%;
+  height: 50%;
   display: flex;
   align-items: center;
 }
@@ -22,7 +35,7 @@
   margin: 0;
   margin-top: 30%;
   display: block;
-  font-size: 6em;
+  font-size: 8em;
   color: rgb(47, 38, 31);
   text-shadow: 2px 2px #D3D3D3;
   font-family: 'Indie Flower', cursive;
@@ -30,7 +43,7 @@
 }
 
 .signup-box {
-  height: 60%;
+  height: 50%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -44,17 +57,22 @@
   align-items: center;
   justify-content: center;
   height: 20%;
-  width: 20%;
+  width: 46%;
   margin-bottom: 10%;
-  border-radius: 2em;
-  background-color: rgb(32, 183, 204);
+/*  border-radius: 2em;*/
+/*  background-color: rgb(32, 183, 204);*/
 }
 
 .signup-link {
-  font-family: 'Scada', sans-serif;
-  font-size: 1.5em;
+  font-family: 'Indie Flower', cursive;
+  font-size: 3em;
   text-decoration: none;
   color: black;
+  background-color: rgba(240, 240, 240, .8);
+  text-align: center;
+  border-radius: 20px;
+  border: solid black 3px;
+  padding: 10px;
 }
 body {
   margin: 0;
@@ -62,7 +80,7 @@ body {
 
 .nav-bar {
   width: 100%;
-  background-color: rgb(32, 183, 204);
+  background-color: rgb(47, 38, 31);
   height: 100%;
   font-size: 25px;
 }
@@ -70,6 +88,11 @@ body {
 .nav {
   display: inline-block;
   margin: 5px 10px;
+}
+
+.nav-text {
+  color: #FAFAFA;
+  font-family: 'Indie Flower', cursive;
 }
 html {
   height: 100%;
@@ -166,6 +189,29 @@ button {
   top: 0;
   z-index: 0;
 }
+.signup-photo-div-consumer {
+  display: inline-flex;
+  height: 100%;
+  width: 40%;
+  align-items: center;
+  justify-content: center;
+  background: url('http://i.imgur.com/JKmaDx4.jpg') center;
+  background-size: cover;
+}
+
+.signup-container-consumer {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-second-container-consumer {
+  height: 80%;
+  width: 60%;
+  margin-left: 40%;
+}
 .error-modal {
   height: 100%;
   width: 100%;
@@ -182,7 +228,7 @@ button {
   top: 0;
   z-index: 0;
 }
-.cook-signup-page {
+.signup-page {
   display: flex;
   flex-direction: row;
   height: 100%;
@@ -251,5 +297,47 @@ button {
 }
 
 
+.login-page-container {
+  background: url('http://i.imgur.com/x7vC8jr.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.login-container {
+  margin: 10%;
+  margin-top: 12%;
+  height: 50%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: solid black 2px;
+  border-radius: 20px;
+  background-color: rgba(240,240, 240, 0.8);
+}
+
+.login-input-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  margin: 15px 0px;
+}
+
+.login-button {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.dashboard-button {
+  margin-top: 25px;
+  height: 50px;
+  width: 250px;
+  text-decoration: none;
+}
 
 /*# sourceMappingURL=main.css.map*/

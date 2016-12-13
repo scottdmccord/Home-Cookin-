@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
+import './login.css';
 
 class Login extends Component {
   constructor(props) {
@@ -121,62 +122,67 @@ class Login extends Component {
 
   render() {
     return(
-      <container>
-        <h1> COOK LOGIN </h1>
+      <div className="login-page-container">
 
-          <div className="login-username-div">
+        <div className="login-container">
+          <h1> COOK LOGIN </h1>
+
+            <div className="login-input-div">
+              <label> Username: </label>
+              <input
+                className="login username"
+                type="text"
+                placeholder="Enter Username"
+                value={this.state.cookLogIn.username}
+                onChange={this.updateCookLogInUsername}
+              />
+            </div>
+
+            <div className="login-input-div">
+              <label> Password: </label>
+              <input
+                className="login password"
+                type="text"
+                placeholder="Enter Password"
+                value={this.state.cookLogIn.password}
+                onChange={this.updateCookLogInPassword}
+              />
+            </div>
+
+            <button className="login-button" onClick={this.cooksLogin}>Enter</button>
+            <button className="dashboard-button"><Link to="cookDashboard">Go to dashboard</Link></button>
+        </div>
+
+        <div className="login-container">
+          <h1> CONSUMER LOGIN </h1>
+
+          <div className="login-input-div">
             <label> Username: </label>
             <input
               className="login username"
               type="text"
               placeholder="Enter Username"
-              value={this.state.cookLogIn.username}
-              onChange={this.updateCookLogInUsername}
+              value={this.state.consumerLogIn.username}
+              onChange={this.updateConsumerLogInUsername}
             />
           </div>
 
-          <div className="login-password-div">
+          <div className="login-input-div">
             <label> Password: </label>
             <input
               className="login password"
               type="text"
               placeholder="Enter Password"
-              value={this.state.cookLogIn.password}
-              onChange={this.updateCookLogInPassword}
+              value={this.state.consumerLogIn.password}
+              onChange={this.updateConsumerLogInPassword}
             />
           </div>
 
-          <button onClick={this.cooksLogin}>Enter</button>
-          <button><Link to="cookDashboard">Go to dashboard</Link></button>
-
-        <h1> CONSUMER LOGIN </h1>
-
-        <div className="login-username-div">
-          <label> Username: </label>
-          <input
-            className="login username"
-            type="text"
-            placeholder="Enter Username"
-            value={this.state.consumerLogIn.username}
-            onChange={this.updateConsumerLogInUsername}
-          />
+          <button className="login-button" onClick={this.consumersLogin}>Enter</button>
+          <button className="dashboard-button"><Link to="consumerDashboard">Go to dashboard</Link></button>
         </div>
 
-        <div className="login-password-div">
-          <label> Password: </label>
-          <input
-            className="login password"
-            type="text"
-            placeholder="Enter Password"
-            value={this.state.consumerLogIn.password}
-            onChange={this.updateConsumerLogInPassword}
-          />
-        </div>
-
-        <button onClick={this.consumersLogin}>Enter</button>
-        <button><Link to="consumerDashboard">Go to dashboard</Link></button>
-
-      </container>
+      </div>
     )
   }
 }

@@ -1,0 +1,23 @@
+.signup-photo-div-consumer {
+  display: inline-flex;
+  height: 100%;
+  width: 40%;
+  align-items: center;
+  justify-content: center;
+  background: url('http://i.imgur.com/JKmaDx4.jpg') center;
+  background-size: cover;
+}
+
+.signup-container-consumer {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-second-container-consumer {
+  height: 80%;
+  width: 60%;
+  margin-left: 40%;
+}

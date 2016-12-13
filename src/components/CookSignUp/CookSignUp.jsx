@@ -87,7 +87,7 @@ class CookSignUp extends Component {
 
   render() {
     return (
-      <container className="cook-signup-page">
+      <container className="signup-page">
 
         <div className="signup-content">
           <div className="cook-signup-header">
@@ -162,9 +162,11 @@ class CookSignUp extends Component {
                 onChange={this.updateSignUpPassword}
               />
             </div>
+
             <div className="button-container">
               <button onClick={this.handleCookCreation}>Sign Up</button>
             </div>
+
           </div>
         </div>
         </div>
