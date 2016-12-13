@@ -282,7 +282,7 @@ class CookDashboard extends Component {
               <UpcomingMeals meals={this.state.upcomingMeals}/>
             </div>
 
-            <div className="dashboard-column3"></div>
+            <div className="dashboard-column3"> Past Meals - feature coming soon</div>
 
           </div>
 

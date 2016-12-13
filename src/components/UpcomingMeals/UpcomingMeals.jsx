@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import UpcomingMealItem from '../UpcomingMealItem/UpcomingMealItem';
+import './UpcomingMeals.css';
 
 const UpcomingMeals = (props) => {
   const meals = props.meals.length > 0 ?
@@ -18,7 +19,7 @@ const UpcomingMeals = (props) => {
     )
     : <p>you have no meals</p>;
   return (
-    <div id="upcoming-meal-container">
+    <div className="upcoming-meal-container">
       {meals}
     </div>
   )

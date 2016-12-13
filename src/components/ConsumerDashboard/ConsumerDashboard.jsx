@@ -150,11 +150,17 @@ class ConsumerDashboard extends Component {
       <container>
       <div className="error-modal">Please log in as a consumer!</div>
       <div className="dashboard-page">
-        <h1> CONSUMER DASHBOARD </h1>
+        <div className="dashboard-header">
+        <h1> Welcome, user. What do you feel like eating today? </h1>
+        </div>
 
-        <div className="meal-search-container">
-          <h3> Search for a meal </h3>
-          <div className="meal-search-form">
+        <div className="dashboard-body">
+
+        <div className="dashboard-column1">
+          <h1> Search for a meal </h1>
+          <div className="dashboard-form-holder">
+
+            <div className="dashboard-form-input">
             <label> Neighborhood: </label>
             <input
               className="neighborhood-search"
@@ -163,21 +169,28 @@ class ConsumerDashboard extends Component {
               value={this.state.neighborhood}
               onChange={this.updateNeighborhood}
             />
+            </div>
 
-            <button onClick={this.searchMeals}>Search!</button>
+            <button className="dashboard-submit" onClick={this.searchMeals}>Search!</button>
           </div>
         </div>
 
-        <h2> Meal Search </h2>
-        <div className="meal-search-items">
-          {this.renderMeals()}
+        <div className="dashboard-column2">
+          <h1> Search Results </h1>
+          <div className="meal-search-items">
+            {this.renderMeals()}
+          </div>
         </div>
 
-        <UpcomingConsumerMeals
-          meals={this.state.upcomingMeals}
-          unbookMeal={this.unbookMeal}
-        />
+        <div className="dashboard-column3-user">
+          <h1> Upcoming Meals </h1>
+          <UpcomingConsumerMeals
+            meals={this.state.upcomingMeals}
+            unbookMeal={this.unbookMeal}
+          />
+        </div>
 
+      </div>
       </div>
       </container>
     )

@@ -55,6 +55,12 @@
   width: 30%;
   border: solid black 2px;
   margin: 0 3%;
+  background-color: rgb(47, 38, 31);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 30px;
 }
 
 .dashboard-form-holder {

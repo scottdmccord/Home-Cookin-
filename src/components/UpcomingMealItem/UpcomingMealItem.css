@@ -4,8 +4,9 @@
 
 .meal-heading {
   margin:0;
-  background-color: yellow;
+  background-color: maroon;
   font-family: 'Noto Serif', serif;
+  color: #FAFAFA;
 }
 
 .row-odd {

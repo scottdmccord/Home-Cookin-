@@ -209,6 +209,14 @@ h1 {
   top: 0;
   z-index: 0;
 }
+
+.dashboard-column3-user {
+  height: 100%;
+  width: 30%;
+  border: solid black 2px;
+  margin: 0 3%;
+  overflow-y: scroll;
+}
 .signup-photo-div-consumer {
   display: inline-flex;
   height: 100%;
@@ -289,6 +297,12 @@ h1 {
   width: 30%;
   border: solid black 2px;
   margin: 0 3%;
+  background-color: rgb(47, 38, 31);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 30px;
 }
 
 .dashboard-form-holder {
@@ -307,8 +321,9 @@ h1 {
 
 .meal-heading {
   margin:0;
-  background-color: yellow;
+  background-color: maroon;
   font-family: 'Noto Serif', serif;
+  color: #FAFAFA;
 }
 
 .row-odd {
@@ -328,6 +343,10 @@ h1 {
   font-family: 'Noto Serif', serif;
 }
 
+.upcoming-meal-container {
+  height: 100%;
+  width: 100%;
+}
 .signup-page {
   display: flex;
   flex-direction: row;

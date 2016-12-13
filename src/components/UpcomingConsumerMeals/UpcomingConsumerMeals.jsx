@@ -17,7 +17,7 @@ const UpcomingConsumerMeals = (props) => {
     )
     : <p> You have no upcoming meals </p>;
     return (
-      <div className="upcoming-consumer-meal-container">
+      <div className="upcoming-meal-container">
         {consumerMeals}
       </div>
     )

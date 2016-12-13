@@ -26,12 +26,12 @@ class MealSearchItem extends Component {
 
   render(){
     return(
-      <div className="mealSearchItem">
-        <h4>Cook: {this.props.cook}</h4>
-        <p>Cuisine type: {this.props.cuisine}</p>
-        <p>Ingredients: {this.props.ingredients}</p>
-        <p>Description: {this.props.description}</p>
-        <p>Numer left: {this.props.counter}</p>
+      <div className="MealSearchItem">
+        <h2 className="meal-heading"> Cook: {this.props.cook}</h2>
+        <p className="row-odd">Cuisine type: {this.props.cuisine}</p>
+        <p className="row-even">Ingredients: {this.props.ingredients}</p>
+        <p className="row-odd">Description: {this.props.description}</p>
+        <p className="row-end">Numer left: {this.props.counter}</p>
         <button onClick={this.bookMeal}>Book meal!</button>
       </div>
     )

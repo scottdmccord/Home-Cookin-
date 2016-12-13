@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 
 const UpcomingConsumerMealsItem = props => (
-  <div className="UpcomingConsumerMealsItem">
-    <h2> Upcoming meals </h2>
-    <h4> Cuisine: {props.cuisine} </h4>
-    <p> Description: {props.description} </p>
-    <p> Price: {props.price} </p>
-    <p> Pickup day: {props.pickup_day} </p>
-    <p> Pickup time: {props.pickup_time} </p>
-    <button onClick={() => props.unbookMeal(props.id)}> Remove </button>
+  <div className="UpcomingMealItem">
+    <h2 className="meal-heading"> Cuisine: {props.cuisine} </h2>
+    <p className="row-odd"> Description: {props.description} </p>
+    <p className="row-even"> Price: {props.price} </p>
+    <p className="row-odd"> Pickup day: {props.pickup_day} </p>
+    <p className="row-end"> Pickup time: {props.pickup_time} </p>
+    <button className="remove-meal-button" onClick={() => props.unbookMeal(props.id)}> Remove </button>
   </div>
 )
 
