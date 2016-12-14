@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+require ('./MealSearchItem.css');
 
 class MealSearchItem extends Component {
   constructor(props) {

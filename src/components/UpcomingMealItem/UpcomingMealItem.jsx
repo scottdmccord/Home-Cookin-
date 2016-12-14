@@ -10,7 +10,7 @@ function cleanDate(x) {
 
 
 const UpcomingMealItem = props => (
-  <div className="upcomingMealItem">
+  <div className="UpcomingMealItem">
     <h2 className="meal-heading"> Cuisine: {props.cuisine} </h2>
     <p className="row-odd"> Ingredients: {props.ingredients} </p>
     <p className="row-even"> Description: {props.description} </p>

@@ -8,9 +8,10 @@
 }
 
 .login-container {
-  margin: 10%;
+  margin: 8%;
   margin-top: 12%;
-  height: 50%;
+  margin-bottom: 0;
+  height: 60%;
   width: 50%;
   display: flex;
   justify-content: center;
@@ -35,8 +36,12 @@
 }
 
 .dashboard-button {
-  margin-top: 25px;
-  height: 50px;
-  width: 250px;
+  margin-top: 10px;
+  height: 40px;
+  width: 200px;
   text-decoration: none;
+}
+
+.login {
+  width: 150px;
 }

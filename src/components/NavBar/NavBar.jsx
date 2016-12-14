@@ -9,7 +9,7 @@ class NavBar extends Component {
       <container>
         <div className="nav-bar">
           <div className="nav home"><Link className="nav-text" to="/" onlyActiveOnIndex={true}>Home</Link></div>
-          <div className="nav login"><Link className="nav-text" to="/login">Login</Link></div>
+          <div className="nav"><Link className="nav-text" to="/login">Login</Link></div>
           <div className="nav logout" onClick={this.props.logOut}><Link className="nav-text" to="/">Logout</Link></div>
         </div>
       </container>

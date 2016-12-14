@@ -35,7 +35,7 @@
   margin: 0;
   margin-top: 30%;
   display: block;
-  font-size: 8em;
+  font-size: 6em;
   color: rgb(47, 38, 31);
   text-shadow: 2px 2px #D3D3D3;
   font-family: 'Indie Flower', cursive;
@@ -68,7 +68,7 @@
 .signup-link {
   font-family: 'Noto Serif', serif;
   width: 100%;
-  font-size: 1.5em;
+  font-size: 1.1em;
   text-decoration: none;
   color: black;
   background-color: rgba(47, 38, 21, 1);
@@ -86,7 +86,7 @@ body {
   width: 100%;
   background-color: rgb(47, 38, 31);
   height: 100%;
-  font-size: 25px;
+  font-size: 19px;
 }
 
 .nav {
@@ -112,26 +112,26 @@ background-color: #FAFAFA;
 }
 
 label {
-  margin-right: 25px;
+  margin-right: 20px;
 /*  font-family: 'Sanchez', serif;*/
   font-family: 'Noto Serif', serif;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 input {
-  height: 25px;
-  width: 200px;
+  height: 20px;
+  width: 180px;
   margin-top: 8px;
   font-family: 'Sanchez', serif;
   /*font-family: 'Allura', cursive;*/
-  font-size: 15px;
+  font-size: 12px;
 }
 
 button {
-  height: 30px;
-  width: 150px;
+  height: 25px;
+  width: 115px;
   font-family: 'Sanchez', serif;
-  font-size: 15px;
+  font-size: 12px;
 /*  background-color: rgb(246, 222, 120);*/
 /*  color: rgb( 48, 104, 168);*/
 }
@@ -139,6 +139,15 @@ button {
 h1 {
   font-family: 'Indie Flower', cursive;
   text-align: center;
+  font-size: 25px;
+}
+
+h2 {
+  font-size: 14px;
+}
+
+p {
+  font-size: 10px;
 }
 
 #root-container {
@@ -203,6 +212,9 @@ h1 {
   overflow: hidden;
   top: 0;
   z-index: 1;
+}
+.MealSearchItem {
+  margin-bottom: 20px;
 }
 .error-modal {
   height: 100%;
@@ -329,9 +341,9 @@ h1 {
 }
 
 .dashboard-label {
-  margin-top: 20px;
+  margin-top: 10px;
 }
-.upcomingMealItem {
+.UpcomingMealItem {
   margin-bottom: 20px;
 }
 
@@ -441,9 +453,10 @@ h1 {
 }
 
 .login-container {
-  margin: 10%;
+  margin: 8%;
   margin-top: 12%;
-  height: 50%;
+  margin-bottom: 0;
+  height: 60%;
   width: 50%;
   display: flex;
   justify-content: center;
@@ -468,10 +481,14 @@ h1 {
 }
 
 .dashboard-button {
-  margin-top: 25px;
-  height: 50px;
-  width: 250px;
+  margin-top: 10px;
+  height: 40px;
+  width: 200px;
   text-decoration: none;
+}
+
+.login {
+  width: 150px;
 }
 
 /*# sourceMappingURL=main.css.map*/

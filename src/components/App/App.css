@@ -12,26 +12,26 @@ background-color: #FAFAFA;
 }
 
 label {
-  margin-right: 25px;
+  margin-right: 20px;
 /*  font-family: 'Sanchez', serif;*/
   font-family: 'Noto Serif', serif;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 input {
-  height: 25px;
-  width: 200px;
+  height: 20px;
+  width: 180px;
   margin-top: 8px;
   font-family: 'Sanchez', serif;
   /*font-family: 'Allura', cursive;*/
-  font-size: 15px;
+  font-size: 12px;
 }
 
 button {
-  height: 30px;
-  width: 150px;
+  height: 25px;
+  width: 115px;
   font-family: 'Sanchez', serif;
-  font-size: 15px;
+  font-size: 12px;
 /*  background-color: rgb(246, 222, 120);*/
 /*  color: rgb( 48, 104, 168);*/
 }
@@ -39,6 +39,15 @@ button {
 h1 {
   font-family: 'Indie Flower', cursive;
   text-align: center;
+  font-size: 25px;
+}
+
+h2 {
+  font-size: 14px;
+}
+
+p {
+  font-size: 10px;
 }
 
 #root-container {

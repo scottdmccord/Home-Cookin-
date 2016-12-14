@@ -221,9 +221,9 @@ class CookDashboard extends Component {
             />
             </div>
 
+            <div className="dashboard-form-input">
             <label className="dashboard-label">Number of meals: </label>
 
-            <div className="dashboard-form-input">
             <input
               className="quantity-input"
               type="text"
@@ -282,7 +282,7 @@ class CookDashboard extends Component {
               <UpcomingMeals meals={this.state.upcomingMeals}/>
             </div>
 
-            <div className="dashboard-column3"> Past Meals - feature coming soon</div>
+            <div className="dashboard-column3"> <h1>Past Meals - feature coming soon</h1></div>
 
           </div>
 
