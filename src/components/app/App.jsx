@@ -1,6 +1,7 @@
 // import the libraries we need
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
+import { browserHistory } from 'react-router';
 import Landing from '../Landing/Landing';
 import NavBar from '../NavBar/NavBar';
 import './App.css';
