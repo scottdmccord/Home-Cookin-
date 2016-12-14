@@ -8,7 +8,7 @@ class ConsumerDashboard extends Component {
     super();
 
     this.state = {
-      consumer: [],
+      consumer: {name: "n/a"},
       meals: [],
       neighborhood: '',
       upcomingMeals: []
@@ -50,7 +50,7 @@ class ConsumerDashboard extends Component {
     .then(r => r.json())
     .then((consumer) => {
       this.setState({
-        consumer: consumer
+        consumer: consumer[0]
       })
     })
     .then(() => {
@@ -153,7 +153,7 @@ class ConsumerDashboard extends Component {
       <div className="error-modal"><h1>Please log in as a consumer!</h1></div>
       <div className="dashboard-page">
         <div className="dashboard-header">
-        <h1> Welcome, user. What do you feel like eating today? </h1>
+        <h1> Welcome, {this.state.consumer.name}. What do you feel like eating today? </h1>
         </div>
 
         <div className="dashboard-body">
