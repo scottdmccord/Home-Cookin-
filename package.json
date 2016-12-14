@@ -33,7 +33,6 @@
     "pg-promise": "^5.4.7",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
-    "react-router": "^2.0.0"
   },
   "devDependencies": {
     "babel": "^6.5.2",
@@ -56,6 +55,7 @@
     "html-webpack-template": "^5.4.1",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
+    "react-router": "^2.0.0",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "webpack": "^1.13.3"
