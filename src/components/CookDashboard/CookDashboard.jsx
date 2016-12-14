@@ -170,7 +170,7 @@ class CookDashboard extends Component {
     return (
       <container>
 
-        <div className="error-modal">Please log in as a cook!</div>
+        <div className="error-modal"><h1>Please log in as a cook!</h1></div>
         <div className="dashboard-page">
 
         <div className="dashboard-header">

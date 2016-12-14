@@ -4,9 +4,8 @@
 
 .meal-heading {
   margin:0;
-  background-color: maroon;
+/*  background-color: maroon;*/
   font-family: 'Noto Serif', serif;
-  color: #FAFAFA;
 }
 
 .row-odd {
@@ -16,13 +15,13 @@
 
 .row-even {
   margin: 0;
-  background-color: grey;
+/*  background-color: grey;*/
   font-family: 'Noto Serif', serif;
 }
 
 .row-end {
   margin: 0;
-  background-color: grey;
+/*  background-color: grey;*/
   font-family: 'Noto Serif', serif;
 }
 

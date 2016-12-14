@@ -11,7 +11,6 @@ class NavBar extends Component {
           <div className="nav home"><Link className="nav-text" to="/" onlyActiveOnIndex={true}>Home</Link></div>
           <div className="nav login"><Link className="nav-text" to="/login">Login</Link></div>
           <div className="nav logout" onClick={this.props.logOut}><Link className="nav-text" to="/">Logout</Link></div>
-          <div className="nav search"><Link className="nav-text" to="/search">Search</Link></div>
         </div>
       </container>
     )
@@ -19,3 +18,5 @@ class NavBar extends Component {
 }
 
 export default NavBar;
+
+          // <div className="nav search"><Link className="nav-text" to="/search">Search</Link></div>

@@ -22,7 +22,6 @@ render((
     <Route path="/" component={App}>
       <IndexRoute component={Landing}/>
       <Route path="/login" component={Login}/>
-      <Route path="/search" component={Search}/>
       <Route path="/consumerDashboard" component={ConsumerDashboard}/>
       <Route path="/consumerSignUp" component={ConsumerSignUp}/>
       <Route path="/consumerProfile" component={ConsumerProfile}/>
@@ -32,3 +31,6 @@ render((
     </Route>
   </Router>
 ), document.querySelector('#root-container'));
+
+      // removed search page for now
+      // <Route path="/search" component={Search}/>

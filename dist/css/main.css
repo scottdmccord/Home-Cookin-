@@ -176,6 +176,16 @@ h1 {
   height: 30px;
   width: 100px;
 }
+
+.error-modal {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Indie Flower', cursive;
+  font-size: 40px;
+}
 .error-modal {
   height: 100%;
   width: 100%;
@@ -216,6 +226,8 @@ h1 {
   border: solid black 2px;
   margin: 0 3%;
   overflow-y: scroll;
+  background: url('http://i.imgur.com/vIOBIaZ.png') no-repeat center center fixed;
+  background-size: cover;
 }
 .signup-photo-div-consumer {
   display: inline-flex;
@@ -290,6 +302,9 @@ h1 {
   border: solid black 2px;
   margin: 0 3%;
   overflow-y: scroll;
+  background: ;
+  background: url('http://i.imgur.com/vIOBIaZ.png') no-repeat center center fixed;
+  background-size: cover;
 }
 
 .dashboard-column3 {
@@ -321,9 +336,8 @@ h1 {
 
 .meal-heading {
   margin:0;
-  background-color: maroon;
+/*  background-color: maroon;*/
   font-family: 'Noto Serif', serif;
-  color: #FAFAFA;
 }
 
 .row-odd {
@@ -333,13 +347,13 @@ h1 {
 
 .row-even {
   margin: 0;
-  background-color: grey;
+/*  background-color: grey;*/
   font-family: 'Noto Serif', serif;
 }
 
 .row-end {
   margin: 0;
-  background-color: grey;
+/*  background-color: grey;*/
   font-family: 'Noto Serif', serif;
 }
 

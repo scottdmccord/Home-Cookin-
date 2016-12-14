@@ -21,4 +21,6 @@
   border: solid black 2px;
   margin: 0 3%;
   overflow-y: scroll;
+  background: url('http://i.imgur.com/vIOBIaZ.png') no-repeat center center fixed;
+  background-size: cover;
 }

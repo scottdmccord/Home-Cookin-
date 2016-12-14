@@ -91,7 +91,7 @@ componentDidMount() {
     return (
       <container>
 
-        <div className="error-modal">Please log in!</div>
+        <div className="error-modal"><h1>Please log in!</h1></div>
         <div className="search-page">
           <h1> SEARCH FOR THINGS! </h1>
 

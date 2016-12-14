@@ -148,7 +148,7 @@ class ConsumerDashboard extends Component {
   render() {
     return (
       <container>
-      <div className="error-modal">Please log in as a consumer!</div>
+      <div className="error-modal"><h1>Please log in as a consumer!</h1></div>
       <div className="dashboard-page">
         <div className="dashboard-header">
         <h1> Welcome, user. What do you feel like eating today? </h1>
