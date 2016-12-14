@@ -14,17 +14,17 @@ As a user, each week you’ll be able to browse meals and chefs in your neighbor
 
 ## Technologies Used and General Approach:
 
-*javascript
-*javaScript web tokens (jwts)
-*react
-*react router
-*node.js
-*express
-*express-jwt
-*morgan
-*path
-*pg-promise
-*bcryptjs
+1. javascript
+2. javaScript web tokens (jwts)
+3. react
+4. react router
+5. node.js
+6. express
+7. express-jwt
+8. morgan
+9. path
+10. pg-promise
+11. bcryptjs
 
 Home Cookin' is a full-stack App built with React. I chose React mainly because I was 
 interested in learning more about how it works, and because I thought
@@ -48,13 +48,13 @@ If a visitor chooses to sign up as an Eater, he will also have to enter the info
 
 ## Wireframes:
 
-Landing page - https://wireframe.cc/IFEVOX
-Sign up page - https://wireframe.cc/0N34Uw
-Diner Dashboard - https://wireframe.cc/6Eh2x9
-Cook Dashboard - https://wireframe.cc/oOr0Um
-Diner Profile - https://wireframe.cc/8fg1Ph
-Cook Profile - https://wireframe.cc/q0TpNc
-Search Page - https://wireframe.cc/UUVL7X
+1. Landing page - https://wireframe.cc/IFEVOX
+2. Sign up page - https://wireframe.cc/0N34Uw
+3. Diner Dashboard - https://wireframe.cc/6Eh2x9
+4. Cook Dashboard - https://wireframe.cc/oOr0Um
+5. Diner Profile - https://wireframe.cc/8fg1Ph
+6. Cook Profile - https://wireframe.cc/q0TpNc
+7. Search Page - https://wireframe.cc/UUVL7X
 
 ## Next Steps:
 
@@ -62,5 +62,6 @@ I was able to overcome most of my major blockers for this project.
 The only thing I wasn't able to finish was the logic to restrict
 meal booking when its order number has met the max quantity. I plan
 to implement this over the next few days. Then, I will move on to 
-building the review portion of the App.
+building the review portion of the App, and building out more CRUD
+functionality.
 
