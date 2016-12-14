@@ -1,6 +1,4 @@
-// import the libraries we need
 import React, { Component } from 'react';
-// import ReactDOM from 'react-dom';
 import { browserHistory } from 'react-router';
 import Landing from '../Landing/Landing';
 import NavBar from '../NavBar/NavBar';
@@ -19,24 +17,28 @@ class App extends Component {
 
   }
 
+  // store user's JWT in state
   updateCurrentToken(newToken) {
     this.setState({
       currentToken: newToken
     });
   }
 
+  // if logged in, store cook user's id in state
   updateCookID(cookID) {
     this.setState({
       cookID: cookID
     });
   }
 
+  // if logged in, store consumer user's id in state
   updateConsumerID(consumerID) {
     this.setState({
       consumerID: consumerID
     });
   }
 
+  // log user out and reset global state
   logOut() {
     console.log('logging out');
     this.setState({

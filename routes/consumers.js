@@ -1,6 +1,5 @@
 const express = require('express');
 const { createConsumer, authenticateConsumer, getConsumerDashboard } = require('../models/consumers.js');
-
 const consumersRouter = express.Router();
 
 const sendJSONresp = (req, res) => res.json(res.rows);

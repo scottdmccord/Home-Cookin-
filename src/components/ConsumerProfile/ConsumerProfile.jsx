@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './ConsumerProfile.css';
 
+// CURRENTLY NOT IN USE
 class ConsumerProfile extends Component {
   render() {
     return (

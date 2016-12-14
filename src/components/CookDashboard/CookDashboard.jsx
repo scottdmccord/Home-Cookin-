@@ -38,6 +38,7 @@ class CookDashboard extends Component {
     console.log('TEST: ', this.state.cook);
   }
 
+  // if user is logged in, hide error message
   hideDashboard() {
     if(this.props.state.cookID !== '') {
       document.querySelector('.error-modal').style.display = 'none';
@@ -45,6 +46,7 @@ class CookDashboard extends Component {
     }
   }
 
+  // render cook's user's information to state
   displayCookDashboard(){
     console.log('current token: ', this.props.state.currentToken);
     let cookID = this.props.state.cookID;
@@ -70,6 +72,7 @@ class CookDashboard extends Component {
       })
   }
 
+  // update meal creation form
   updateCuisineType(e) {
     this.setState({
       inputCuisineType: e.target.value
@@ -112,6 +115,7 @@ class CookDashboard extends Component {
     })
   }
 
+  // create a new meal and save it to database
   createMeal() {
     fetch('/meals', {
       headers: {
@@ -145,6 +149,7 @@ class CookDashboard extends Component {
     .catch(err => console.log(err));
   }
 
+  // render cook's upcoming meals to state
   getUpcomingMeals(){
     fetch('/meals/renderCookMealsUpcoming', {
       headers: {
@@ -172,6 +177,7 @@ class CookDashboard extends Component {
       <container>
 
         <div className="error-modal"><h1>Please log in as a cook!</h1></div>
+
         <div className="dashboard-page">
 
         <div className="dashboard-header">
@@ -181,116 +187,91 @@ class CookDashboard extends Component {
         <div  className="dashboard-body">
 
           <div className="dashboard-column1">
-
             <h1> Make a Meal </h1>
-
             <div className="dashboard-form-holder">
-
+              <div className="dashboard-form-input">
+                <label className="dashboard-label">Cuisine Type: </label>
+                <input
+                  className="cuisine-input"
+                  type="text"
+                  placeholder="Enter cuisine type"
+                  value={this.state.inputCuisineType}
+                  onChange={this.updateCuisineType}
+                />
+              </div>
             <div className="dashboard-form-input">
-            <label className="dashboard-label">Cuisine Type: </label>
-
-            <input
-              className="cuisine-input"
-              type="text"
-              placeholder="Enter cuisine type"
-              value={this.state.inputCuisineType}
-              onChange={this.updateCuisineType}
-            />
-            </div>
-
+              <label className="dashboard-label">Ingredients: </label>
+              <input
+                className="ingredients-input"
+                type="text"
+                placeholder="Enter ingredients"
+                value={this.state.inputIngredients}
+                onChange={this.updateIngredients}
+              />
+              </div>
             <div className="dashboard-form-input">
-            <label className="dashboard-label">Ingredients: </label>
-
-            <input
-              className="ingredients-input"
-              type="text"
-              placeholder="Enter ingredients"
-              value={this.state.inputIngredients}
-              onChange={this.updateIngredients}
-            />
+              <label className="dashboard-label">Description: </label>
+              <input
+                className="description-input"
+                type="text"
+                placeholder="Enter description"
+                value={this.state.inputDescription}
+                onChange={this.updateDescription}
+              />
             </div>
-
             <div className="dashboard-form-input">
-            <label className="dashboard-label">Description: </label>
-
-            <input
-              className="description-input"
-              type="text"
-              placeholder="Enter description"
-              value={this.state.inputDescription}
-              onChange={this.updateDescription}
-            />
+              <label className="dashboard-label">Number of meals: </label>
+              <input
+                className="quantity-input"
+                type="text"
+                placeholder="Enter # of meals to sell"
+                value={this.state.inputQuantity}
+                onChange={this.updateQuantity}
+              />
             </div>
-
             <div className="dashboard-form-input">
-            <label className="dashboard-label">Number of meals: </label>
-
-            <input
-              className="quantity-input"
-              type="text"
-              placeholder="Enter # of meals to sell"
-              value={this.state.inputQuantity}
-              onChange={this.updateQuantity}
-            />
+              <label className="dashboard-label">Pickup day: </label>
+              <input
+                className="pickupDay-input"
+                type="date"
+                value={this.state.inputPickupDay}
+                onChange={this.updatePickupDay}
+              />
             </div>
-
-
             <div className="dashboard-form-input">
-            <label className="dashboard-label">Pickup day: </label>
-
-            <input
-              className="pickupDay-input"
-              type="date"
-              value={this.state.inputPickupDay}
-              onChange={this.updatePickupDay}
-            />
+              <label className="dashboard-label">Pickup time: </label>
+              <input
+                className="pickupTime-input"
+                type="text"
+                placeholder="Ex) 8am - 9am"
+                value={this.state.inputPickupTime}
+                onChange={this.updatePickupTime}
+              />
             </div>
-
             <div className="dashboard-form-input">
-            <label className="dashboard-label">Pickup time: </label>
-
-            <input
-              className="pickupTime-input"
-              type="text"
-              placeholder="Ex) 8am - 9am"
-              value={this.state.inputPickupTime}
-              onChange={this.updatePickupTime}
-            />
+              <label className="dashboard-label">Price: </label>
+              <input
+                className="price-input"
+                type="text"
+                placeholder="Enter price"
+                value={this.state.inputPrice}
+                onChange={this.updatePrice}
+              />
             </div>
-
-            <div className="dashboard-form-input">
-            <label className="dashboard-label">Price: </label>
-
-            <input
-              className="price-input"
-              type="text"
-              placeholder="Enter price"
-              value={this.state.inputPrice}
-              onChange={this.updatePrice}
-            />
-            </div>
-
             <button className="dashboard-submit" onClick={this.createMeal}> Submit! </button>
-            </div>
-
-            </div>
-
-            <div className="dashboard-column2">
-
-                <h1> Upcoming Meals </h1>
-
-              <UpcomingMeals meals={this.state.upcomingMeals}/>
-            </div>
-
-            <div className="dashboard-column3"> <h1>Past Meals - feature coming soon</h1></div>
-
           </div>
+        </div>
 
+        <div className="dashboard-column2">
+          <h1> Upcoming Meals </h1>
+          <UpcomingMeals meals={this.state.upcomingMeals}/>
+        </div>
 
-
+        <div className="dashboard-column3"> <h1>Past Meals - feature coming soon</h1></div>
 
         </div>
 
+        </div>
 
       </container>
     )

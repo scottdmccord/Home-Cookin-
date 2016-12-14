@@ -19,6 +19,7 @@ class ConsumerSignUp extends Component {
     this.handleConsumerCreation = this.handleConsumerCreation.bind(this);
   }
 
+  // update sign up information
   updateSignUpName(e) {
     this.setState({
       consumerSignUpName: e.target.value
@@ -43,6 +44,7 @@ class ConsumerSignUp extends Component {
     });
   };
 
+  // submit user creation information
   handleConsumerCreation() {
     console.log('starting fetch');
     fetch('/consumers', {
@@ -73,11 +75,12 @@ class ConsumerSignUp extends Component {
       <container className="signup-page">
 
         <div className="signup-photo-div-consumer">
-      {/*photo by christopher baker,
-      http://www.realsimple.com/food-recipes/recipe-collections-favorites/quick-easy/fast-dinner-recipes-0*/}
+          {/*photo by christopher baker,
+          http://www.realsimple.com/food-recipes/recipe-collections-favorites/quick-easy/fast-dinner-recipes-0*/}
         </div>
 
         <div className="signup-content">
+
           <div className="cook-signup-header">
             <h1 className="signup-title"> USER SIGN UP </h1>
           </div>
@@ -135,6 +138,7 @@ class ConsumerSignUp extends Component {
 
           </div>
         </div>
+
       </div>
 
       </container>

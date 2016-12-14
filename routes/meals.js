@@ -1,6 +1,5 @@
 const express = require('express');
 const { createMeal, getMealsByNeighborhood, getUpcomingMealsByCook, getUpcomingMealsByConsumer, bookMeal, unbookMeal } = require('../models/meals.js')
-
 const mealsRouter = express.Router();
 
 const sendJSONresp = (req, res) => res.json(res.rows);

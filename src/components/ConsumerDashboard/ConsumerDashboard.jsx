@@ -28,6 +28,7 @@ class ConsumerDashboard extends Component {
     this.displayConsumerDashboard();
   }
 
+  // hide the error modal if consumer is logged in
   hideModal() {
     if(this.props.state.consumerID !== '') {
       document.querySelector('.error-modal').style.display = 'none';
@@ -35,6 +36,7 @@ class ConsumerDashboard extends Component {
     }
   }
 
+  // fetch consumer user's information and save it to state
   displayConsumerDashboard(){
     let consumerID = this.props.state.consumerID;
     fetch('/consumers/consumerDashboard', {
@@ -58,12 +60,14 @@ class ConsumerDashboard extends Component {
     })
   }
 
+  // put neighborhood query to state
   updateNeighborhood(e) {
     this.setState({
       neighborhood: e.target.value
     });
   }
 
+  // search for meals in queried neighborhood and return them to state
   searchMeals() {
     fetch('/meals/searchNeighborhood', {
       headers: {
@@ -86,6 +90,7 @@ class ConsumerDashboard extends Component {
     this.renderMeals();
   }
 
+  // display queried meals on the stage
   renderMeals() {
     return this.state.meals.map((meal, i) =>
       <MealSearchItem
@@ -105,6 +110,7 @@ class ConsumerDashboard extends Component {
     );
   }
 
+  // render upcoming "booked" meals to page
   getUpcomingConsumerMeals() {
     fetch('/meals/renderConsumerMealsUpcoming', {
       headers: {
@@ -127,6 +133,7 @@ class ConsumerDashboard extends Component {
     .catch(err => console.log(err));
   }
 
+  // remove a meal from "booked" list
   unbookMeal(id) {
     fetch(`/meals/unbookMeal/${id}`, {
       headers: {
@@ -150,50 +157,50 @@ class ConsumerDashboard extends Component {
   render() {
     return (
       <container>
-      <div className="error-modal"><h1>Please log in as a consumer!</h1></div>
-      <div className="dashboard-page">
-        <div className="dashboard-header">
-        <h1> Welcome, {this.state.consumer.name}. What do you feel like eating today? </h1>
-        </div>
 
-        <div className="dashboard-body">
+        <div className="error-modal"><h1>Please log in as a consumer!</h1></div>
 
-        <div className="dashboard-column1">
-          <h1> Search for a meal </h1>
-          <div className="dashboard-form-holder">
+        <div className="dashboard-page">
+          <div className="dashboard-header">
+            <h1> Welcome, {this.state.consumer.name}. What do you feel like eating today? </h1>
+          </div>
+          <div className="dashboard-body">
 
-            <div className="dashboard-form-input">
-            <label> Neighborhood: </label>
-            <input
-              className="neighborhood-search"
-              type="text"
-              placeholder="Enter neighborhood"
-              value={this.state.neighborhood}
-              onChange={this.updateNeighborhood}
-            />
+            <div className="dashboard-column1">
+              <h1> Search for a meal </h1>
+              <div className="dashboard-form-holder">
+                <div className="dashboard-form-input">
+                  <label> Neighborhood: </label>
+                  <input
+                    className="neighborhood-search"
+                    type="text"
+                    placeholder="Enter neighborhood"
+                    value={this.state.neighborhood}
+                    onChange={this.updateNeighborhood}
+                  />
+                </div>
+                <button className="dashboard-submit" onClick={this.searchMeals}>Search!</button>
+              </div>
             </div>
 
-            <button className="dashboard-submit" onClick={this.searchMeals}>Search!</button>
+            <div className="dashboard-column2">
+              <h1> Search Results </h1>
+              <div className="meal-search-items">
+                {this.renderMeals()}
+              </div>
+            </div>
+
+            <div className="dashboard-column3-user">
+              <h1> Upcoming Meals </h1>
+              <UpcomingConsumerMeals
+                meals={this.state.upcomingMeals}
+                unbookMeal={this.unbookMeal}
+              />
+            </div>
+
           </div>
         </div>
 
-        <div className="dashboard-column2">
-          <h1> Search Results </h1>
-          <div className="meal-search-items">
-            {this.renderMeals()}
-          </div>
-        </div>
-
-        <div className="dashboard-column3-user">
-          <h1> Upcoming Meals </h1>
-          <UpcomingConsumerMeals
-            meals={this.state.upcomingMeals}
-            unbookMeal={this.unbookMeal}
-          />
-        </div>
-
-      </div>
-      </div>
       </container>
     )
   }

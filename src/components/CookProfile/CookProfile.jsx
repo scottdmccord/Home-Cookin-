@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+// CURRENTLY NOT IN USE
 class CookProfile extends Component {
   render() {
     return (
