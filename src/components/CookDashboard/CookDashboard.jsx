@@ -228,7 +228,7 @@ class CookDashboard extends Component {
             <input
               className="quantity-input"
               type="text"
-              placeholder="Enter quantity"
+              placeholder="Enter # of meals to sell"
               value={this.state.inputQuantity}
               onChange={this.updateQuantity}
             />
@@ -241,7 +241,6 @@ class CookDashboard extends Component {
             <input
               className="pickupDay-input"
               type="date"
-              placeholder="Enter pickup day"
               value={this.state.inputPickupDay}
               onChange={this.updatePickupDay}
             />
@@ -253,7 +252,7 @@ class CookDashboard extends Component {
             <input
               className="pickupTime-input"
               type="text"
-              placeholder="Enter pickup time"
+              placeholder="Ex) 8am - 9am"
               value={this.state.inputPickupTime}
               onChange={this.updatePickupTime}
             />

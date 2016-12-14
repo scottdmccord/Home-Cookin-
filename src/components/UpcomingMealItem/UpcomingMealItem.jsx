@@ -17,7 +17,7 @@ const UpcomingMealItem = props => (
     <p className="row-odd"> Quantity: {props.quantity} </p>
     <p className="row-even"> Pickup day: {cleanDate(props.pickup_day)} </p>
     <p className="row-odd"> Pickup time: {props.pickup_time} </p>
-    <p className="row-end"> Price: {props.price} </p>
+    <p className="row-end"> Price: ${props.price} </p>
   </div>
 )
 
