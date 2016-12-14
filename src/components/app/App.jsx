@@ -1,12 +1,12 @@
 // import the libraries we need
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Landing from '../Landing/Landing';
 import NavBar from '../NavBar/NavBar';
 import './App.css';
 
 // create react component for App
-export default class App extends React.Component{
+class App extends Component {
   constructor(props) {
     super();
 
@@ -74,3 +74,5 @@ export default class App extends React.Component{
     )
   }
 }
+
+export default App;
