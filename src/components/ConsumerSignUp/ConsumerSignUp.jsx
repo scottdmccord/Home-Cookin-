@@ -20,28 +20,24 @@ class ConsumerSignUp extends Component {
   }
 
   updateSignUpName(e) {
-    console.log(e.target.value)
     this.setState({
       consumerSignUpName: e.target.value
     });
   };
 
   updateSignUpEmail(e) {
-    console.log(e.target.value)
     this.setState({
       consumerSignUpEmail: e.target.value
     });
   };
 
   updateSignUpUsername(e) {
-    console.log(e.target.value)
     this.setState({
       consumerSignUpUsername: e.target.value
     });
   };
 
   updateSignUpPassword(e) {
-    console.log(e.target.value)
     this.setState({
       consumerSignUpPassword: e.target.value
     });
@@ -59,6 +55,14 @@ class ConsumerSignUp extends Component {
         email: this.state.consumerSignUpEmail,
         username: this.state.consumerSignUpUsername,
         password: this.state.consumerSignUpPassword
+      })
+    })
+    .then(() => {
+      this.setState({
+        consumerSignUpName: '',
+        consumerSignUpEmail: '',
+        consumerSignUpUsername: '',
+        consumerSignUpPassword: ''
       })
     })
     .catch(err => console.log(err));

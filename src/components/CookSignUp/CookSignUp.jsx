@@ -24,42 +24,36 @@ class CookSignUp extends Component {
   }
 
   updateSignUpName(e) {
-    console.log(e.target.value)
     this.setState({
       cookSignUpName: e.target.value
     });
   };
 
   updateSignUpEmail(e) {
-    console.log(e.target.value)
     this.setState({
       cookSignUpEmail: e.target.value
     });
   };
 
   updateSignUpUsername(e) {
-    console.log(e.target.value)
     this.setState({
       cookSignUpUsername: e.target.value
     });
   };
 
   updateSignUpPassword(e) {
-    console.log(e.target.value)
     this.setState({
       cookSignUpPassword: e.target.value
     });
   };
 
   updateSignUpAddress(e) {
-    console.log(e.target.value)
     this.setState({
       cookSignUpAddress: e.target.value
     });
   };
 
   updateSignUpNeighborhood(e) {
-    console.log(e.target.value)
     this.setState({
       cookSignUpNeighborhood: e.target.value
     });
@@ -80,6 +74,16 @@ class CookSignUp extends Component {
         password: this.state.cookSignUpPassword,
         neighborhood: this.state.cookSignUpNeighborhood,
         address: this.state.cookSignUpAddress
+      })
+    })
+    .then(() => {
+      this.setState({
+        cookSignUpName: '',
+        cookSignUpEmail: '',
+        cookSignUpUsername: '',
+        cookSignUpPassword: '',
+        cookSignUpNeighborhood: '',
+        cookSignUpAddress: ''
       })
     })
     .catch(err => console.log(err));
