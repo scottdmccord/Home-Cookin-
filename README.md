@@ -1,5 +1,7 @@
 # Home Cookin'
 
+![alt text] (http://i.imgur.com/mm9ObyU.jpg "Home Cookin'")
+
 ## About
 
 Sick of getting lunch from the same restaurants every day? Ever wish you could have a home cooked meal for lunch but don’t have the time to make it yourself? Or, do you love to cook and want to turn your skills into a small business venture? Welcome to Home Comin'...
@@ -35,3 +37,7 @@ If the visitor chooses to sign up as a Cook, he will first have to enter the inf
 ###Eater user
 
 If a visitor chooses to sign up as an Eater, he will also have to enter the information required to make his account. Once this is complete, he will be taken to the Eater landing / welcome page. On this page, he will be able to search upcoming meals by location, price, and cuisine type. He also will be able to browse Cooks and save them to his database of “Favorite Cooks”. After conducting a search, the Eater will be able to reserve meals. After the transaction has been completed, the Eater will be eligible to review the Cook.
+
+## Wireframes
+
+
