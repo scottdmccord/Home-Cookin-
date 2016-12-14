@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './UpcomingMealItem.css';
 
 function cleanDate(x) {
-  let y = x.replace('T05:00:00.000Z', '')
+  let y = x.slice(0, 10)
   // return x.toDateString();
   console.log(typeof x)
   return y
