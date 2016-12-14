@@ -12,19 +12,27 @@ As a user, each week you’ll be able to browse meals and chefs in your neighbor
 
 (Note: ratings feature is currently not implemented)
 
-## Technologies Used:
+## Technologies Used and General Approach:
 
--javascript
--javaScript web tokens (jwts)
--react
--react router
--node.js
--express
--express-jwt
--morgan
--path
--pg-promise
--bcryptjs
+*javascript
+*javaScript web tokens (jwts)
+*react
+*react router
+*node.js
+*express
+*express-jwt
+*morgan
+*path
+*pg-promise
+*bcryptjs
+
+Home Cookin' is a full-stack App built with React. I chose React mainly because I was 
+interested in learning more about how it works, and because I thought
+that this App could take advantage of its virtual DOM / state functionality.
+I also wanted a project that had user authentication, so I chose to implement
+JWTs and bcrypt for extra security. Finally, I used React Router so that the App
+would mimic having multiple url pages. Run npm install if you would like to download 
+and use this repo.
 
 ## User Stories:
 
@@ -38,6 +46,21 @@ If the visitor chooses to sign up as a Cook, he will first have to enter the inf
 
 If a visitor chooses to sign up as an Eater, he will also have to enter the information required to make his account. Once this is complete, he will be taken to the Eater landing / welcome page. On this page, he will be able to search upcoming meals by location, price, and cuisine type. He also will be able to browse Cooks and save them to his database of “Favorite Cooks”. After conducting a search, the Eater will be able to reserve meals. After the transaction has been completed, the Eater will be eligible to review the Cook.
 
-## Wireframes
+## Wireframes:
 
+Landing page - https://wireframe.cc/IFEVOX
+Sign up page - https://wireframe.cc/0N34Uw
+Diner Dashboard - https://wireframe.cc/6Eh2x9
+Cook Dashboard - https://wireframe.cc/oOr0Um
+Diner Profile - https://wireframe.cc/8fg1Ph
+Cook Profile - https://wireframe.cc/q0TpNc
+Search Page - https://wireframe.cc/UUVL7X
+
+## Next Steps:
+
+I was able to overcome most of my major blockers for this project.
+The only thing I wasn't able to finish was the logic to restrict
+meal booking when its order number has met the max quantity. I plan
+to implement this over the next few days. Then, I will move on to 
+building the review portion of the App.
 
