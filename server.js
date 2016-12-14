@@ -1,4 +1,4 @@
-'use strict'
+ 'use strict'
 // Only load dotenv if we need it (if we have NODE_ENV in our environment)
 const isDev = !('NODE_ENV' in process.env) && require('dotenv').config() && true;
 
