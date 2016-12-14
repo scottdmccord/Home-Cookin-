@@ -239,7 +239,7 @@ class CookDashboard extends Component {
 
             <input
               className="pickupDay-input"
-              type="text"
+              type="date"
               placeholder="Enter pickup day"
               value={this.state.inputPickupDay}
               onChange={this.updatePickupDay}

@@ -142,7 +142,7 @@ class Login extends Component {
               <label> Password: </label>
               <input
                 className="login password"
-                type="text"
+                type="password"
                 placeholder="Enter Password"
                 value={this.state.cookLogIn.password}
                 onChange={this.updateCookLogInPassword}
@@ -171,7 +171,7 @@ class Login extends Component {
             <label> Password: </label>
             <input
               className="login password"
-              type="text"
+              type="password"
               placeholder="Enter Password"
               value={this.state.consumerLogIn.password}
               onChange={this.updateConsumerLogInPassword}
