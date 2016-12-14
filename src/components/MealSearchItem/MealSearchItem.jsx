@@ -22,6 +22,7 @@ class MealSearchItem extends Component {
         consumer_id: this.props.consumerID
       })
     })
+    .then(() => {this.props.getUpcomingMeals()})
     .catch(err => console.log(err));
   }
 

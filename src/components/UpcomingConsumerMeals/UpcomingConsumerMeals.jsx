@@ -15,7 +15,7 @@ const UpcomingConsumerMeals = (props) => {
         unbookMeal={props.unbookMeal}
       />
     )
-    : <p> You have no upcoming meals </p>;
+    : <h2> You have no upcoming meals </h2>;
     return (
       <div className="upcoming-meal-container">
         {consumerMeals}

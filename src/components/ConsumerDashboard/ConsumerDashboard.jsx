@@ -100,6 +100,7 @@ class ConsumerDashboard extends Component {
         pickup_day={meal.pickup_day}
         token={this.props.state.currentToken}
         consumerID={this.props.state.consumerID}
+        getUpcomingMeals={this.getUpcomingConsumerMeals}
       />
     );
   }
@@ -141,6 +142,7 @@ class ConsumerDashboard extends Component {
       // });
       // this.setSate({ meals })
     })
+    .then(() => this.getUpcomingConsumerMeals())
     .catch(err => console.log(err));
   }
 

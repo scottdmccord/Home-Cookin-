@@ -141,6 +141,7 @@ class CookDashboard extends Component {
         inputPrice: ''
       })
     })
+    .then(() => {this.getUpcomingMeals()})
     .catch(err => console.log(err));
   }
 
