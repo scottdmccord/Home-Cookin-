@@ -17,7 +17,7 @@ const consumersRouter = require('./routes/consumers');
 const mealsRouter = require('./routes/meals');
 
 const app = express();
-const PORT = process.argv[2] || process.env.port || 3000;
+const PORT = process.argv[2] || process.env.PORT || 3000;
 
 // log resonse code
 app.use(logger(isDev ? 'dev' : 'common'));
