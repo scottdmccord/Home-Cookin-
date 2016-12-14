@@ -32,7 +32,7 @@ CREATE TABLE meals (
   quantity INT NOT NULL,
   counter INT NOT NULL,
   pickup_day DATE NOT NULL,
-  pickup_time TIME NOT NULL,
+  pickup_time TEXT NOT NULL,
   price INT NOT NULL,
   cook_id INT NOT NULL,
   date_created TIMESTAMP NOT NULL DEFAULT NOW()
