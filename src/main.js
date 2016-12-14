@@ -6,7 +6,7 @@ import Landing from './components/Landing/Landing';
 import Search from './components/Search/Search';
 import ConsumerDashboard from './components/ConsumerDashboard/ConsumerDashboard';
 import ConsumerSignUp from './components/ConsumerSignUp/ConsumerSignUp';
-import ConsumerProfile from './components/consumerProfile/consumerProfile';
+import ConsumerProfile from './components/ConsumerProfile/ConsumerProfile';
 import CookDashboard from './components/CookDashboard/CookDashboard';
 import CookProfile from './components/CookProfile/CookProfile';
 import CookSignUp from './components/CookSignUp/CookSignUp';

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './ConsumerProfile.css';
 
 class ConsumerProfile extends Component {
   render() {
