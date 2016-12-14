@@ -2,7 +2,11 @@
   "name": "home_cookin",
   "version": "1.0.0",
   "description": "Home Cookin' is a an app that connects people who love home cooking with people who love to cook.",
+  "engines": {
+    "node": "6.6.0"
+  },
   "main": "server.js",
+  "private": true,
   "scripts": {
     "clean": "rm -rf dist && rm -rf node_modules",
     "heroku-prebuild": "bash ./scripts/deployment_react.sh",
