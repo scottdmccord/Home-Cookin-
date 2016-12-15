@@ -65,3 +65,7 @@ to implement this over the next few days. Then, I will move on to
 building the review portion of the App, and building out more CRUD
 functionality.
 
+## Heroku:
+
+You can see the App live, here: https://home-cookin.herokuapp.com/
+
