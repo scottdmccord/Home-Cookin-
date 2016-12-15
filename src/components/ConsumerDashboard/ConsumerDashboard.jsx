@@ -103,6 +103,7 @@ class ConsumerDashboard extends Component {
         id={meal.id}
         pickup_time={meal.pickup_time}
         pickup_day={meal.pickup_day}
+        price={meal.price}
         token={this.props.state.currentToken}
         consumerID={this.props.state.consumerID}
         getUpcomingMeals={this.getUpcomingConsumerMeals}

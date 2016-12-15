@@ -8,6 +8,7 @@ class MealSearchItem extends Component {
     this.state = {
     }
     this.bookMeal = this.bookMeal.bind(this);
+    this.cleanDate = this.cleanDate.bind(this);
   }
 
   // saves a meal to consumer's "upcoming meal" list
@@ -27,6 +28,11 @@ class MealSearchItem extends Component {
     .catch(err => console.log(err));
   }
 
+  cleanDate(x) {
+    let y = x.slice(0, 10);
+    return y;
+  }
+
   render(){
     return(
       <div className="MealSearchItem">
@@ -34,6 +40,9 @@ class MealSearchItem extends Component {
         <p className="row-odd">Cuisine type: {this.props.cuisine}</p>
         <p className="row-even">Ingredients: {this.props.ingredients}</p>
         <p className="row-odd">Description: {this.props.description}</p>
+        <p className="row-even">Price: ${this.props.price}</p>
+        <p className="row-odd">Pickup day: {this.cleanDate(this.props.pickup_day)}</p>
+        <p className="row-even">Pickup time: {this.props.pickup_time}</p>
         <p className="row-end">Numer left: {this.props.counter}</p>
         <button onClick={this.bookMeal}>Book meal!</button>
       </div>

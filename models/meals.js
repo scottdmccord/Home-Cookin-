@@ -10,7 +10,7 @@ function createMeal(req, res, next) {
 
 // get all meals still available in the queried neighborhood
 function getMealsByNeighborhood(req, res, next) {
-  db.any(`SELECT meals.cuisine_type, meals.ingredients, meals.description, cooks.name, cooks.id, cooks.neighborhood, meals.counter, meals.id, meals.pickup_day, meals.pickup_time
+  db.any(`SELECT meals.cuisine_type, meals.ingredients, meals.description, cooks.name, cooks.id, cooks.neighborhood, meals.counter, meals.id, meals.pickup_day, meals.pickup_time, meals.price
           FROM meals
           INNER JOIN cooks
           on meals.cook_id = cooks.id

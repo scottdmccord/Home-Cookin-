@@ -44,10 +44,12 @@ h1 {
 
 h2 {
   font-size: 14px;
+  font-family: 'Sanchez', serif;
 }
 
 p {
   font-size: 10px;
+  font-family: 'Sanchez', serif;
 }
 
 #root-container {
