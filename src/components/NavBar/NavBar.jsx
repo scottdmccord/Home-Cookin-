@@ -19,4 +19,5 @@ class NavBar extends Component {
 
 export default NavBar;
 
-          // <div className="nav search"><Link className="nav-text" to="/search">Search</Link></div>
+// TO BE USED LATER:
+// <div className="nav search"><Link className="nav-text" to="/search">Search</Link></div>

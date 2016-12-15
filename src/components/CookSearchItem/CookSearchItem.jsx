@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+// CURRENTLY NOT IN USE
 const CookSearchItem = props => (
   <div className="cookSearchItem">
     <h2>{props.name}</h2>

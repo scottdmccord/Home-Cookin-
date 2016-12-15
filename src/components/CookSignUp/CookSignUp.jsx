@@ -23,6 +23,7 @@ class CookSignUp extends Component {
     this.handleCookCreation = this.handleCookCreation.bind(this);
   }
 
+  // updates cook sign up information to state
   updateSignUpName(e) {
     this.setState({
       cookSignUpName: e.target.value
@@ -60,6 +61,7 @@ class CookSignUp extends Component {
   };
 
 
+  // creates a new cook user with the information in state
   handleCookCreation() {
     console.log('starting fetch');
     fetch('/cooks', {
@@ -94,6 +96,7 @@ class CookSignUp extends Component {
       <container className="signup-page">
 
         <div className="signup-content">
+
           <div className="cook-signup-header">
             <h1 className="signup-title"> COOK SIGN UP </h1>
           </div>
@@ -101,82 +104,83 @@ class CookSignUp extends Component {
           <div className="signup-container">
             <div className="signup-second-container">
 
-            <div className="signup-input-div">
-              <label> Name: </label>
-              <input
-                className="signup-input name"
-                type="text"
-                placeholder="Enter Name"
-                value={this.state.cookSignUpName}
-                onChange={this.updateSignUpName}
-              />
-            </div>
+              <div className="signup-input-div">
+                <label> Name: </label>
+                <input
+                  className="signup-input name"
+                  type="text"
+                  placeholder="Enter Name"
+                  value={this.state.cookSignUpName}
+                  onChange={this.updateSignUpName}
+                />
+              </div>
 
-            <div className="signup-input-div">
-              <label> Address: </label>
-              <input
-                className="signup-input address"
-                type="text"
-                placeholder="Enter address"
-                value={this.state.cookSignUpAddress}
-                onChange={this.updateSignUpAddress}
-              />
-            </div>
+              <div className="signup-input-div">
+                <label> Address: </label>
+                <input
+                  className="signup-input address"
+                  type="text"
+                  placeholder="Enter address"
+                  value={this.state.cookSignUpAddress}
+                  onChange={this.updateSignUpAddress}
+                />
+              </div>
 
-            <div className="signup-input-div">
-              <label> Neighborhood: </label>
-              <input
-                className="signup-input neighborhood"
-                type="text"
-                placeholder="Enter Neighborhood"
-                value={this.state.cookSignUpNeighborhood}
-                onChange={this.updateSignUpNeighborhood}
-              />
-            </div>
+              <div className="signup-input-div">
+                <label> Neighborhood: </label>
+                <input
+                  className="signup-input neighborhood"
+                  type="text"
+                  placeholder="Enter Neighborhood"
+                  value={this.state.cookSignUpNeighborhood}
+                  onChange={this.updateSignUpNeighborhood}
+                />
+              </div>
 
-            <div className="signup-input-div">
-              <label> Email: </label>
-              <input
-                className="signup-input email"
-                type="text"
-                placeholder="Enter Email"
-                value={this.state.cookSignUpEmail}
-                onChange={this.updateSignUpEmail}
-              />
-            </div>
+              <div className="signup-input-div">
+                <label> Email: </label>
+                <input
+                  className="signup-input email"
+                  type="text"
+                  placeholder="Enter Email"
+                  value={this.state.cookSignUpEmail}
+                  onChange={this.updateSignUpEmail}
+                />
+              </div>
 
-            <div className="signup-input-div">
-              <label> Username: </label>
-              <input
-                className="signup-input username"
-                type="text"
-                placeholder="Enter Username"
-                value={this.state.cookSignUpUsername}
-                onChange={this.updateSignUpUsername}
-              />
-            </div>
+              <div className="signup-input-div">
+                <label> Username: </label>
+                <input
+                  className="signup-input username"
+                  type="text"
+                  placeholder="Enter Username"
+                  value={this.state.cookSignUpUsername}
+                  onChange={this.updateSignUpUsername}
+                />
+              </div>
 
-            <div className="signup-input-div">
-              <label> Password: </label>
-              <input
-                className="signup-input password"
-                type="text"
-                placeholder="Enter Password"
-                value={this.state.cookSignUpPassword}
-                onChange={this.updateSignUpPassword}
-              />
-            </div>
+              <div className="signup-input-div">
+                <label> Password: </label>
+                <input
+                  className="signup-input password"
+                  type="text"
+                  placeholder="Enter Password"
+                  value={this.state.cookSignUpPassword}
+                  onChange={this.updateSignUpPassword}
+                />
+              </div>
 
-            <div className="button-container">
-              <button onClick={this.handleCookCreation}>Sign Up</button>
-            </div>
+              <div className="button-container">
+                <button onClick={this.handleCookCreation}>Sign Up</button>
+              </div>
 
+            </div>
           </div>
-        </div>
+
         </div>
 
         <div className="signup-photo-div">
-      {/*photo taken from The Body Book*/}
+          {/*photo taken from The Body Book*/}
         </div>
 
       </container>

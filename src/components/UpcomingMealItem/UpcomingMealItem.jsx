@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './UpcomingMealItem.css';
 
+
 function cleanDate(x) {
   let y = x.slice(0, 10)
   // return x.toDateString();

@@ -10,6 +10,7 @@ class MealSearchItem extends Component {
     this.bookMeal = this.bookMeal.bind(this);
   }
 
+  // saves a meal to consumer's "upcoming meal" list
   bookMeal(){
     fetch('/meals/bookMeal', {
       headers: {

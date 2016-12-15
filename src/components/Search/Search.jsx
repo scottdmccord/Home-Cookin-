@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import CookSearchItem from '../CookSearchItem/CookSearchItem.jsx';
 import './Search.css'
 
+// PAGE CURRENTLY NOT IN USE, TO BE MODIFIED LATER
 class Search extends Component {
   constructor(props) {
     super();

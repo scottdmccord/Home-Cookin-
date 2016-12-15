@@ -46,7 +46,6 @@ class Login extends Component {
       });
     }
 
-
     cooksLogin() {
       console.log('posting the login!');
       fetch('/cooks/login', {
